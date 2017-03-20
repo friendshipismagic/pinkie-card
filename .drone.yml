@@ -11,7 +11,7 @@ pipeline:
   telegram:
     image: appleboy/drone-telegram
     token: ${TGBOT_TOKEN}
-    to: -172113772
+    to: [-172113772]
     message: |
       {{ #success build.status }}
         Build {{ build.number }} succeeded. Yay to {{ build.author }}!
