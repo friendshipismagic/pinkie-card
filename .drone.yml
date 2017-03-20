@@ -6,5 +6,5 @@ pipeline:
       - qmake-qt5 -project
       - echo "QT += qml" >> pinkie-card.pro
       - qmake-qt5
-      - make
+      - make -j8
 
