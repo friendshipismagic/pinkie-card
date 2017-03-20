@@ -8,3 +8,14 @@ pipeline:
       - qmake-qt5
       - make -j8
 
+  telegram:
+    image: appleboy/drone-telegram
+    token: ${TGBOT_TOKEN}
+    to: -172113772
+    message: |
+      {{ #success build.status }}
+        Build {{ build.number }} succeeded. Yay to {{ build.author }}!
+      {{ else }}
+        Build {{ build.number }} failed. {{ build.author }} YOU SUCK!
+      {{ /success }}
+
