@@ -1,0 +1,10 @@
+pipeline:
+  build:
+    image: tuetuopay/qt5
+    commands:
+      - pushd pinkie-card
+      - qmake-qt5 -project
+      - echo "QT += qml" >> pinkie-card.pro
+      - qmake-qt5
+      - make
+
