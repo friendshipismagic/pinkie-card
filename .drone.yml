@@ -14,9 +14,6 @@ pipeline:
     to:
       - "-172113772"
     message: |
-      {{ #success build.status }}
-        Build {{ build.number }} succeeded. Yay to {{ build.author }}!
-      {{ else }}
-        Build {{ build.number }} failed. {{ build.author }} YOU SUCK!
-      {{ /success }}
+      {{ build.author }}: {{ build.commit }}
+      Build {{ build.number }} {{ build.status }}.
 
