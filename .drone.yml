@@ -1,10 +1,10 @@
 pipeline:
   build:
-    image: tuetuopay/qt5
+    image: tuetuopay/qt5:${DIST}-${CXX}
     commands:
-      - pushd pinkie-card
-      - qmake-qt5
-      - make -j8
+      - cd pinkie-card
+      - qmake-qt5 || qmake
+      - make -j8 CXX=$(echo ${CXX} | sed s/cc//g)++
 
   telegram:
     image: appleboy/drone-telegram
@@ -14,4 +14,13 @@ pipeline:
     message: |
       {{ build.author }}: {{ build.commit }}
       Build {{ build.number }} {{ build.status }}.
+
+matrix:
+  DIST:
+    - arch
+    - fedora
+    - ubuntu
+  CXX:
+    - gcc
+    - clang
 
