@@ -7,13 +7,11 @@ pipeline:
       - make -j8 CXX=$(echo ${CXX} | sed s/cc//g)++
 
   telegram:
-    image: appleboy/drone-telegram
+    image: tuetuopay/drone-telegram
     token: ${TGBOT_TOKEN}
     to:
       - "-172113772"
-    message: |
-      {{ build.author }}: {{ build.commit }}
-      Build {{ build.number }} {{ build.status }}.
+    append: "on ${DIST} with ${CXX}"
 
 matrix:
   DIST:
