@@ -6,6 +6,12 @@ pipeline:
       - qmake-qt5
       - make -j8
 
+  report:
+    image: blang/latex
+    commands:
+      - pushd report
+      - pdflatex report.tex
+
   telegram:
     image: appleboy/drone-telegram
     token: ${TGBOT_TOKEN}
