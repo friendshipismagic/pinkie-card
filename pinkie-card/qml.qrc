@@ -5,5 +5,7 @@
         <file>IntroForm.ui.qml</file>
         <file>Intro.qml</file>
         <file>images/flags/United_States.svg</file>
+        <file>FlagModal.qml</file>
+        <file>FlagModalForm.ui.qml</file>
     </qresource>
 </RCC>

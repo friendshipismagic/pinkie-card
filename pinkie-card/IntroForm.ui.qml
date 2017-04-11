@@ -22,24 +22,6 @@ Item {
         font.pixelSize: 12
     }
 
-    Button {
-        id: lang_select
-        x: 477
-        width: 70
-        height: 36
-        anchors.right: parent.right
-        anchors.rightMargin: 20
-        anchors.top: parent.top
-        anchors.topMargin: 20
-        z: 1
-        style: ButtonStyle {
-            background: Image {
-                fillMode: Image.PreserveAspectFit
-                source: "images/flags/United_States.svg"
-            }
-        }
-    }
-
     Text {
         id: clock
         x: 557
