@@ -8,4 +8,6 @@ ApplicationWindow {
     height: 480
     title: qsTr("The Pinkie Card")
 
+    IntroForm {}
+
 }

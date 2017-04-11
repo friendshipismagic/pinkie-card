@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>IntroForm.ui.qml</file>
+        <file>Intro.qml</file>
     </qresource>
 </RCC>
