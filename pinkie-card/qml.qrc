@@ -4,5 +4,6 @@
         <file>qtquickcontrols2.conf</file>
         <file>IntroForm.ui.qml</file>
         <file>Intro.qml</file>
+        <file>images/flags/United_States.svg</file>
     </qresource>
 </RCC>

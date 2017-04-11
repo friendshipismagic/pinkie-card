@@ -1,5 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 1.4
+import QtQuick.Controls.Styles 1.4
 
 Item {
     id: intro_form
@@ -19,21 +21,64 @@ Item {
         font.pixelSize: 12
     }
 
+    Button {
+        id: lang_select
+        x: 477
+        width: 70
+        height: 36
+        anchors.right: parent.right
+        anchors.rightMargin: 20
+        anchors.top: parent.top
+        anchors.topMargin: 20
+        z: 1
+        style: ButtonStyle {
+            background: Image {
+                fillMode: Image.PreserveAspectFit
+                source: "images/flags/United_States.svg"
+            }
+        }
+    }
+
     RowLayout {
         id: buttons_layout
         anchors.fill: parent
         spacing: 0
 
-        Rectangle {
-            color: 'teal'
+        Button {
+            text: "In Place"
             Layout.preferredWidth: parent.width/2
             Layout.fillHeight: true
+            style: ButtonStyle {
+                background: Rectangle {
+                    implicitWidth: 100
+                    implicitHeight: 25
+                    border.width: control.activeFocus ? 2 : 0
+                    border.color: "#888"
+                    gradient: Gradient {
+                        GradientStop { position: 0 ; color: control.pressed ? "#ccc" : "#eee" }
+                        GradientStop { position: 1 ; color: control.pressed ? "#aaa" : "#ccc" }
+                    }
+                }
+            }
         }
 
-        Rectangle {
-            color: 'plum'
+        Button {
+            text: "Take Away"
             Layout.preferredWidth: parent.width/2
             Layout.fillHeight: true
+            style: ButtonStyle {
+                background: Rectangle {
+                    implicitWidth: 100
+                    implicitHeight: 25
+                    border.width: control.activeFocus ? 2 : 0
+                    border.color: "#888"
+                    gradient: Gradient {
+                        GradientStop { position: 0 ; color: control.pressed ? "#ccc" : "#eee" }
+                        GradientStop { position: 1 ; color: control.pressed ? "#aaa" : "#ccc" }
+                    }
+                }
+            }
         }
     }
+
 }
