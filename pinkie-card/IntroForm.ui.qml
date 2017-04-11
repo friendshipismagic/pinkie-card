@@ -45,7 +45,7 @@ Item {
         spacing: 0
 
         Button {
-            text: "In Place"
+            text: qsTr("In Place")
             Layout.preferredWidth: parent.width/2
             Layout.fillHeight: true
             style: ButtonStyle {
@@ -63,7 +63,7 @@ Item {
         }
 
         Button {
-            text: "Take Away"
+            text: qsTr("Take Away")
             Layout.preferredWidth: parent.width/2
             Layout.fillHeight: true
             style: ButtonStyle {
