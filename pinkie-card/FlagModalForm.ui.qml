@@ -8,6 +8,7 @@ Popup {
     y: 100
     modal: true
     focus: true
+
     closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
     property int flags_width: 70
     property int flags_height: 36

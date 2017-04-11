@@ -37,6 +37,9 @@ ApplicationWindow {
 
     FlagModal {
         id: flag_modal
+        // XXX: Should change this awful hack to get the modal centered
+        x: (parent.width - width)/2
+        y: (parent.height - height)/2
     }
 
 }
