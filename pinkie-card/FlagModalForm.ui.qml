@@ -49,6 +49,20 @@ Popup {
                     onClicked: flag_modal.close()
                 }
             }
+
+            Image {
+                id: select_JAP
+                width: flags_width
+                height: flags_height
+                fillMode: Image.PreserveAspectFit
+                source: "images/flags/Japan.svg"
+                sourceSize.width: flags_width
+                sourceSize.height: flags_height
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: flag_modal.close()
+                }
+            }
         }
     }
 }
