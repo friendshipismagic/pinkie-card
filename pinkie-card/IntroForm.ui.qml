@@ -8,6 +8,7 @@ Item {
     width: 640
     height: 480
     anchors.fill: parent
+    property string cur_clock: "13:37"
 
     Text {
         id: title
@@ -37,6 +38,23 @@ Item {
                 source: "images/flags/United_States.svg"
             }
         }
+    }
+
+    Text {
+        id: clock
+        x: 557
+        y: 446
+        width: 0
+        height: 0
+        text: parent.cur_clock
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 20
+        anchors.right: parent.right
+        anchors.rightMargin: 20
+        verticalAlignment: Text.AlignBottom
+        horizontalAlignment: Text.AlignRight
+        z: 1
+        font.pixelSize: 12
     }
 
     RowLayout {
@@ -80,5 +98,6 @@ Item {
             }
         }
     }
+
 
 }
