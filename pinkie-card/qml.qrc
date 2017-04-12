@@ -9,5 +9,7 @@
         <file>TakeAwayTile.qml</file>
         <file>TakeAwayTileForm.ui.qml</file>
         <file>StartersModel.qml</file>
+        <file>DishesModel.qml</file>
+        <file>DessertsModel.qml</file>
     </qresource>
 </RCC>
