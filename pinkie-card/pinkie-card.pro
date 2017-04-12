@@ -33,4 +33,7 @@ DISTFILES += \
     TakeAway.qml \
     TakeAwayTileForm.ui.qml \
     TakeAwayTile.qml \
-    StartersModel.qml
+    StartersModel.qml \
+    DishesModel.qml \
+    DessertsModel.qml \
+    images/dishes/dish_base.jpg
