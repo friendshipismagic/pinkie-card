@@ -6,8 +6,8 @@ Item {
     id: take_away_form
     width: 640
     height: 480
-    property int tiles_width: 100
-    property int tiles_height: 100
+    property int tiles_width: 300
+    property int tiles_height: 300
 
     Text {
         id: main_title
@@ -19,7 +19,7 @@ Item {
 
     SwipeView {
         id: swipe_view
-        anchors.topMargin: 50
+        anchors.topMargin: main_title.height + main_title.y
         anchors.fill: parent
         currentIndex: 0
 
@@ -42,16 +42,17 @@ Item {
             }
             GridView {
                 id: starters_grid
-                cellHeight: tiles_height
-                cellWidth: tiles_width
+                // empty = parent.width - cellWidth * Math.floor(parent.width/cellWidth)
+                width: cellWidth * Math.floor(parent.width / cellWidth)
+                contentHeight: tiles_height
+                contentWidth: tiles_width
+                anchors.topMargin: starters_text.height
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 0
-                anchors.right: parent.right
-                anchors.rightMargin: 640
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                anchors.topMargin: starters_text.height
                 anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                cellHeight: tiles_height
+                cellWidth: tiles_width
 
                 delegate: TakeAwayTile {
                     width: tiles_width
