@@ -58,6 +58,8 @@ Item {
                     width: tiles_width
                     height: tiles_height
                     menu_text: dish_name
+                    menu_thumbnail: dish_thumbnail
+                    menu_primary_color: 'green'
                 }
                 model: StartersModel {}
             }
@@ -97,6 +99,7 @@ Item {
                     width: tiles_width
                     height: tiles_height
                     menu_text: dish_name
+                    menu_primary_color: 'blue'
                 }
                 model: DishesModel {}
             }
@@ -136,6 +139,7 @@ Item {
                     width: tiles_width
                     height: tiles_height
                     menu_text: dish_name
+                    menu_primary_color: 'red'
                 }
                 model: DessertsModel {}
             }
