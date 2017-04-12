@@ -65,10 +65,80 @@ Item {
 
         Item {
             id: dishes_page
+            Text {
+                id: dishes_text
+                text: qsTr("Dishes")
+                anchors.right: parent.right
+                anchors.rightMargin: 0
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.left: parent.left
+                anchors.leftMargin: 0
+                topPadding: 10
+                bottomPadding: this.topPadding
+                Layout.fillWidth: true
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+            }
+            GridView {
+                id: dishes_grid
+                width: cellWidth * Math.floor(parent.width / cellWidth)
+                contentHeight: tiles_height
+                contentWidth: tiles_width
+                anchors.topMargin: starters_text.height
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                cellHeight: tiles_height
+                cellWidth: tiles_width
+
+                delegate: TakeAwayTile {
+                    width: tiles_width
+                    height: tiles_height
+                    menu_text: dish_name
+                }
+                model: DishesModel {}
+            }
         }
 
         Item {
             id: desserts_page
+            Text {
+                id: desserts_text
+                text: qsTr("Desserts")
+                anchors.right: parent.right
+                anchors.rightMargin: 0
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.left: parent.left
+                anchors.leftMargin: 0
+                topPadding: 10
+                bottomPadding: this.topPadding
+                Layout.fillWidth: true
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+            }
+            GridView {
+                id: desserts_grid
+                width: cellWidth * Math.floor(parent.width / cellWidth)
+                contentHeight: tiles_height
+                contentWidth: tiles_width
+                anchors.topMargin: starters_text.height
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                cellHeight: tiles_height
+                cellWidth: tiles_width
+
+                delegate: TakeAwayTile {
+                    width: tiles_width
+                    height: tiles_height
+                    menu_text: dish_name
+                }
+                model: DessertsModel {}
+            }
         }
     }
 
