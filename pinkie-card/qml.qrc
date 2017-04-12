@@ -11,5 +11,6 @@
         <file>StartersModel.qml</file>
         <file>DishesModel.qml</file>
         <file>DessertsModel.qml</file>
+        <file>images/dishes/dish_base.jpg</file>
     </qresource>
 </RCC>
