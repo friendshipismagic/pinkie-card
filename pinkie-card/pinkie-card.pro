@@ -30,4 +30,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     TakeAwayForm.ui.qml \
-    TakeAway.qml
+    TakeAway.qml \
+    TakeAwayTileForm.ui.qml \
+    TakeAwayTile.qml \
+    StartersModel.qml
