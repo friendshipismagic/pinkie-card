@@ -9,7 +9,7 @@ Item {
     Text {
         id: dish_text
         text: menu_text
-        font.pointSize: 15
+        font.pointSize: 9
         z: 1
         anchors.top: parent.top
         anchors.topMargin: 20
@@ -20,7 +20,7 @@ Item {
     Rectangle {
         id: background_tile
         anchors.fill: parent
-        color: 'blue'
+        color: menu_text
         z: 0
     }
 }
