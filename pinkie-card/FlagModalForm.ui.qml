@@ -2,66 +2,61 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.1
 
-Popup {
-    id: flags_modal
-    x: 100
-    y: 100
-    modal: true
-    focus: true
+Item {
+    id: item1
 
-    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
     property int flags_width: 70
     property int flags_height: 36
+    property alias usButton: usButton
+    property alias japButton: japButton
+    property alias frButton: frButton
 
-    ColumnLayout {
-        anchors.fill: parent
-        Text {
-            text: "Select your language"
+    GridLayout {
+        id: flags_grid
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+
+        Image {
+            id: select_FR
+            width: flags_width
+            height: flags_height
+            fillMode: Image.PreserveAspectFit
+            source: "images/flags/France.svg"
+            sourceSize.width: flags_width
+            sourceSize.height: flags_height
+
+            MouseArea {
+                id: frButton
+                anchors.fill: parent
+            }
         }
 
-        GridLayout {
-            id: flags_grid
-
-            Image {
-                id: select_FR
-                width: flags_width
-                height: flags_height
-                fillMode: Image.PreserveAspectFit
-                source: "images/flags/France.svg"
-                sourceSize.width: flags_width
-                sourceSize.height: flags_height
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: flag_modal.close()
-                }
+        Image {
+            id: select_US
+            width: flags_width
+            height: flags_height
+            fillMode: Image.PreserveAspectFit
+            source: "images/flags/United_States.svg"
+            sourceSize.width: flags_width
+            sourceSize.height: flags_height
+            MouseArea {
+                id: usButton
+                anchors.fill: parent
             }
+        }
 
-            Image {
-                id: select_US
-                width: flags_width
-                height: flags_height
-                fillMode: Image.PreserveAspectFit
-                source: "images/flags/United_States.svg"
-                sourceSize.width: flags_width
-                sourceSize.height: flags_height
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: flag_modal.close()
-                }
-            }
+        Image {
+            id: select_JAP
+            width: flags_width
+            height: flags_height
+            fillMode: Image.PreserveAspectFit
+            source: "images/flags/Japan.svg"
+            sourceSize.width: flags_width
+            sourceSize.height: flags_height
 
-            Image {
-                id: select_JAP
-                width: flags_width
-                height: flags_height
-                fillMode: Image.PreserveAspectFit
-                source: "images/flags/Japan.svg"
-                sourceSize.width: flags_width
-                sourceSize.height: flags_height
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: flag_modal.close()
-                }
+            MouseArea {
+                id: japButton
+                anchors.fill: parent
             }
         }
     }

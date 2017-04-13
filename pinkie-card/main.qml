@@ -1,7 +1,6 @@
 import QtQuick 2.7
-import QtQuick.Controls 1.4
-import QtQuick.Controls.Styles 1.4
-import QtQuick.Layouts 1.0
+import QtQuick.Controls 2.1
+import QtQuick.Layouts 1.3
 import QtQml 2.2
 
 ApplicationWindow {
@@ -27,19 +26,24 @@ ApplicationWindow {
         anchors.topMargin: 20
         z: 1
         onClicked: flag_modal.open()
-        style: ButtonStyle {
-            background: Image {
-                fillMode: Image.PreserveAspectFit
-                source: "images/flags/United_States.svg"
-            }
+
+        background: Image {
+            source: "images/flags/France.svg"
         }
     }
 
-    FlagModal {
+    Popup {
         id: flag_modal
+        modal: true
+        focus: true
         // XXX: Should change this awful hack to get the modal centered
-        x: (parent.width - width)/2
-        y: (parent.height - height)/2
-    }
+        x: parent.width / 2
+        y: parent.height / 2
 
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+
+        FlagModal {
+
+        }
+    }
 }
