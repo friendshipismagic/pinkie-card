@@ -43,9 +43,58 @@ Le premier design proposé a été choisi pour l'interface principale du systèm
 
 Les objectifs les moins bien remplis par ce design sont les exigences de portabilité : pour être correctement utilisée l'interface doit être disposée sur un écran avec une résolution suffisante ; la taille de l'écran doit également être plutôt grande, c'est-à-dire au moins correspondre à un format tablette. Ce design n'est pas adapté au déploiement d'une application pour téléphone que les clients pourraient installer sur leurs propres appareils.
 
+Pour répondre à ce dernier point, une version alternative de l'interface, plus sobre et suivant le deuxième design, sera développée.
+
 \subsection{Évolution des besoins lors de la conception du design}
 
+Il n'a pas été possible de concilier tous les différents besoins dans un design unique. La difficulté fut de proposer un aspect et des fonctionnalités suffisamment attrayants pour justifier un passage à un système numérique au niveau de la carte des menus pour les clients sur place, et qui pourrait en même temps être portés sur les machines personnelles des clients qui commande à distance.
 
+La solution est de proposer deux clients différents, avec le gros du développement dédié à l'interface principale pour tablette. Cela ne propage pas une redondance à tout le système puisque la partie logique et celle présentée au personnel du restaurant reste unique.
+
+\subsection{Fonctionnement du design}
+
+Dans cette partie on explique en détail l'interface principale retenue et son fonctionnement.
+
+\begin{itemize}
+
+\item L'écran d'introduction :
+
+L'écran d'introduction est ce qui est présenté avant le début de l'interaction d'un utilisateur avec le système. L'utilisateur est invité à choisir entre "sur place" et "à emporter" pour commencer sa commande. La langue par défaut est le français mais un bouton drapeau est affiché dans un coin est permet de changer la langue de l'interface.
+
+\includegraphics[width=13cm]{intro_screen.jpg}
+
+Une disposition différente a également été envisagée :
+
+\includegraphics[width=13cm]{alt_intro_screen.jpg}
+
+\item L'écran principal après avoir choisi "sur place" :
+
+Cette partie de l'interface repose sur deux "decks" : l'un en bas de l'écran et l'autre à droite. Celui de droite permet de sélectionner le sous-menu correspondant à un type d'article, par exemple plats, desserts, boissons. Celui du bas permet de sélectionner un article au sein d'une catégorie, par exemple coq au vin, croque-monsieur. Le bouton drapeau reste présent sur cet écran comme sur tous les autres de l'interface.
+
+\includegraphics[width=13cm]{in_place_screen1.jpg}
+
+Quand on clique sur un article, un écran modal s'ouvre et affiche des détails sur l'article et permet de préciser quelques éléments (par exemple la cuisson pour une viande) avant de l'ajouter à la commande.
+
+\includegraphics[width=13cm]{in_place_screen2.jpg}
+
+\item L'écran après avoir choisi "à emporter" :
+
+Sur cet écran l'interface est plus sommaire et les articles sont présentés dans une liste hiérarchisée en sous-catégories. Le système d'écran modal du mode "sur place" est aussi présent.
+
+\includegraphics[width=13cm]{takeaway_screen.jpg}
+
+\item Écran de confirmation :
+Après avoir validé la commande, un écran présentant un récapitulatif de la commande invite à confirmer.
+
+\includegraphics[width=13cm]{confirmation_screen.jpg}
+
+\item Écran final :
+
+Après la validation de la commande un écran de remerciement est affiché. On donne une estimation du temps d'attente avant le service, est un champ pour afficher des informations quelconques est présent.
+
+\includegraphics[width=13cm]{final_screen.jpg}
+
+\end{itemize}
 
 \end{document}
 
