@@ -9,7 +9,7 @@ pipeline:
   report:
     image: blang/latex
     commands:
-      - pdflatex report/report.tex
+      - cd report && pdflatex report.tex
 
   telegram:
     image: appleboy/drone-telegram
@@ -17,7 +17,7 @@ pipeline:
     to:
       - "-172113772"
     document:
-      - report.pdf
+      - report/report.pdf
     message: |
       {{ build.author }}: {{ build.commit }}
       Build {{ build.number }} {{ build.status }}.
