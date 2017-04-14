@@ -43,7 +43,11 @@ ApplicationWindow {
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
 
         FlagModal {
-
+            flag_item_changed.onCurrentIndexChanged: {
+                flag_modal.close();
+                // Reset state for next popup display
+                flag_item_changed.currentIndex = -1;
+            }
         }
     }
 }
