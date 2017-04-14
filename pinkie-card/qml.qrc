@@ -5,5 +5,8 @@
         <file>IntroForm.ui.qml</file>
         <file>Intro.qml</file>
         <file>images/flags/United_States.svg</file>
+        <file>ForHereScreen.qml</file>
+        <file>ForHereScreenForm.ui.qml</file>
+        <file>images/restaurant-table-set.jpg</file>
     </qresource>
 </RCC>
