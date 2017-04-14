@@ -32,4 +32,5 @@ DISTFILES += \
     IntroForm.ui.qml \
     Intro.qml \
     FlagModal.qml \
-    FlagModalForm.ui.qml
+    FlagModalForm.ui.qml \
+    LanguageModel.qml

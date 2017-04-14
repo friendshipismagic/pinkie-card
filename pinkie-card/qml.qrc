@@ -9,5 +9,6 @@
         <file>FlagModalForm.ui.qml</file>
         <file>images/flags/France.svg</file>
         <file>images/flags/Japan.svg</file>
+        <file>LanguageModel.qml</file>
     </qresource>
 </RCC>
