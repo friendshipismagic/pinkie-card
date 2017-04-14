@@ -1,6 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.1
+import "models"
 
 Item {
     property int flags_width: 70
