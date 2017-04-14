@@ -63,8 +63,8 @@ Item {
         spacing: 0
 
         Button {
-            text: "In Place"
-            Layout.preferredWidth: parent.width/2
+            text: "For here"
+            Layout.preferredWidth: parent.width / 2
             Layout.fillHeight: true
             style: ButtonStyle {
                 background: Rectangle {
@@ -73,16 +73,22 @@ Item {
                     border.width: control.activeFocus ? 2 : 0
                     border.color: "#888"
                     gradient: Gradient {
-                        GradientStop { position: 0 ; color: control.pressed ? "#ccc" : "#eee" }
-                        GradientStop { position: 1 ; color: control.pressed ? "#aaa" : "#ccc" }
+                        GradientStop {
+                            position: 0
+                            color: control.pressed ? "#ccc" : "#eee"
+                        }
+                        GradientStop {
+                            position: 1
+                            color: control.pressed ? "#aaa" : "#ccc"
+                        }
                     }
                 }
             }
         }
 
         Button {
-            text: "Take Away"
-            Layout.preferredWidth: parent.width/2
+            text: "To go"
+            Layout.preferredWidth: parent.width / 2
             Layout.fillHeight: true
             style: ButtonStyle {
                 background: Rectangle {
@@ -91,13 +97,17 @@ Item {
                     border.width: control.activeFocus ? 2 : 0
                     border.color: "#888"
                     gradient: Gradient {
-                        GradientStop { position: 0 ; color: control.pressed ? "#ccc" : "#eee" }
-                        GradientStop { position: 1 ; color: control.pressed ? "#aaa" : "#ccc" }
+                        GradientStop {
+                            position: 0
+                            color: control.pressed ? "#ccc" : "#eee"
+                        }
+                        GradientStop {
+                            position: 1
+                            color: control.pressed ? "#aaa" : "#ccc"
+                        }
                     }
                 }
             }
         }
     }
-
-
 }
