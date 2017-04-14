@@ -2,11 +2,11 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
-        <file>IntroForm.ui.qml</file>
         <file>images/flags/United_States.svg</file>
         <file>images/flags/France.svg</file>
         <file>images/flags/Japan.svg</file>
         <file>models/LanguageModel.qml</file>
         <file>FlagModal.ui.qml</file>
+        <file>Intro.ui.qml</file>
     </qresource>
 </RCC>

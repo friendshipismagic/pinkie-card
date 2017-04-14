@@ -29,6 +29,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    IntroForm.ui.qml \
     models/LanguageModel.qml \
-    FlagModal.ui.qml
+    FlagModal.ui.qml \
+    Intro.ui.qml

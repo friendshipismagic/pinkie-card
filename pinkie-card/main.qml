@@ -12,7 +12,7 @@ ApplicationWindow {
 
     property date cur_date: new Date()
 
-    IntroForm {
+    Intro {
         cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
     }
 
