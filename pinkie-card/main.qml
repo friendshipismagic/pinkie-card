@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.3
 import QtQml 2.2
 
 ApplicationWindow {
+    id: root
     visible: true
     width: 640
     height: 480
@@ -25,7 +26,7 @@ ApplicationWindow {
         anchors.top: parent.top
         anchors.topMargin: 20
         z: 1
-        onClicked: flag_modal.open()
+        onClicked: flag_popup.open()
 
         background: Image {
             source: "images/flags/France.svg"
@@ -33,18 +34,20 @@ ApplicationWindow {
     }
 
     Popup {
-        id: flag_modal
+        id: flag_popup
         modal: true
         focus: true
         // XXX: Should change this awful hack to get the modal centered
         x: parent.width / 2
-        y: parent.height / 2
+        y: (parent.height - flag_modal.flags_height) / 2
 
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
 
         FlagModal {
+            id: flag_modal
+            parent_width: root.width
             flag_item_changed.onCurrentIndexChanged: {
-                flag_modal.close();
+                flag_popup.close();
                 // Reset state for next popup display
                 flag_item_changed.currentIndex = -1;
             }

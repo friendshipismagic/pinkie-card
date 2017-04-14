@@ -6,11 +6,19 @@ Item {
     property int flags_width: 70
     property int flags_height: 36
     property alias flag_item_changed: flags_grid
+    property int parent_width: 640
+    property int parent_height: 480
 
     GridView {
         id: flags_grid
+        width: cellWidth * Math.min(
+                   Math.floor(parent_width / cellWidth),
+                   count)
+        cellHeight: flags_height
+        cellWidth: flags_width
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
+
         currentIndex: -1
 
         model: LanguageModel {}
