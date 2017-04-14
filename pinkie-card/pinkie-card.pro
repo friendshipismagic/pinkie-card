@@ -31,4 +31,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     models/LanguageModel.qml \
     FlagModal.ui.qml \
-    Intro.ui.qml
+    Intro.ui.qml \
+    GenericTile.ui.qml

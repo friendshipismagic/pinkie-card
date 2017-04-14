@@ -8,5 +8,6 @@
         <file>models/LanguageModel.qml</file>
         <file>FlagModal.ui.qml</file>
         <file>Intro.ui.qml</file>
+        <file>GenericTile.ui.qml</file>
     </qresource>
 </RCC>
