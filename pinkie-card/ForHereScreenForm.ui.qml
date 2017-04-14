@@ -122,6 +122,7 @@ Item {
 
         Image {
             id: image
+            fillMode: Image.PreserveAspectFit
             anchors.bottom: bottomList.top
             anchors.bottomMargin: 10
             anchors.right: rightList.left
@@ -130,7 +131,7 @@ Item {
             anchors.leftMargin: 10
             anchors.top: parent.top
             anchors.topMargin: 10
-            source: "qrc:/qtquickplugin/images/template_image.png"
+            source: "images/restaurant-table-set.jpg"
         }
     }
 }
