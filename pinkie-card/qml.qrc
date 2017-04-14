@@ -8,5 +8,6 @@
         <file>ForHereScreen.qml</file>
         <file>ForHereScreenForm.ui.qml</file>
         <file>images/restaurant-table-set.jpg</file>
+        <file>DishDelegate.qml</file>
     </qresource>
 </RCC>

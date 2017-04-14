@@ -13,9 +13,7 @@ ApplicationWindow {
         visible: true
         anchors.fill: parent
         bottomList.model: startersList
-        bottomList.delegate: Text {
-            text: name;
-            anchors.margins: 5
+        bottomList.delegate: DishDelegate {
         }
     }
 
@@ -32,10 +30,6 @@ ApplicationWindow {
         }
     }
 
-//    Component {
-//        id: dishDelegate
-
-//    }
 
     property date cur_date: new Date()
 
