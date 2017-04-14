@@ -3,18 +3,15 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.1
 
 Item {
-    id: item1
-
     property int flags_width: 70
     property int flags_height: 36
-    property alias usButton: usButton
-    property alias japButton: japButton
-    property alias frButton: frButton
+    property alias flag_item_changed: flags_grid
 
     GridView {
         id: flags_grid
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
+        currentIndex: -1
 
         model: LanguageModel {}
         delegate: Image {
@@ -27,6 +24,7 @@ Item {
 
             MouseArea {
                 anchors.fill: parent
+                onClicked: flags_grid.currentIndex = index
             }
         }
     }
