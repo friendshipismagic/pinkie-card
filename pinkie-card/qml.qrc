@@ -9,5 +9,9 @@
         <file>ForHereScreenForm.ui.qml</file>
         <file>images/restaurant-table-set.jpg</file>
         <file>DishDelegate.qml</file>
+        <file>images/dishes/salade.jpg</file>
+        <file>images/dishes/carottes.jpg</file>
+        <file>images/dishes/celeri_remoulade.jpg</file>
+        <file>main.cpp</file>
     </qresource>
 </RCC>

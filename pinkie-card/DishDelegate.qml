@@ -4,14 +4,14 @@ import QtQuick.Layouts 1.0
 import QtQml 2.2
 
 Image {
-    property int delegateWidth: 50
+    property int delegateWidth: 100
     id: image1
     width: delegateWidth
     anchors.top: parent.top
     anchors.bottom: parent.bottom
     anchors.bottomMargin: caption.height
     fillMode: Image.PreserveAspectFit
-    source: "qrc:/images/flags/United_States.svg"
+    source: imageSource
 
     Text {
         id: caption

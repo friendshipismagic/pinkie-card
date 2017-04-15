@@ -11,8 +11,8 @@ Item {
     ListView {
         id: bottomList
         x: 30
-        y: 340
-        height: 50
+        y: 329
+        height: 100
         anchors.right: parent.right
         anchors.rightMargin: 100
         anchors.left: parent.left
