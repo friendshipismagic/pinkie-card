@@ -3,25 +3,21 @@ import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 import QtQml 2.2
 
-
-Item {
-    width: 50
-    clip: false
-    Image {
-        height: 30
-        anchors.right: parent.right
-        anchors.rightMargin: 0
-        anchors.left: parent.left
-        anchors.leftMargin: 0
-        source: "images/flags/United_States.svg"
-        anchors.top: parent.top
-        Layout.fillHeight: true
-    }
+Image {
+    property int delegateWidth: 50
+    id: image1
+    width: delegateWidth
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.bottomMargin: caption.height
+    fillMode: Image.PreserveAspectFit
+    source: "qrc:/images/flags/United_States.svg"
 
     Text {
+        id: caption
         text: name
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 0
-        Layout.preferredHeight: 10
+        width: delegateWidth
+        anchors.top: parent.bottom
+        elide: Text.ElideMiddle
     }
 }

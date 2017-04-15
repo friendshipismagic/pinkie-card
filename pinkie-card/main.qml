@@ -15,6 +15,7 @@ ApplicationWindow {
         bottomList.model: startersList
         bottomList.delegate: DishDelegate {
         }
+        bottomList.spacing: 10
     }
 
     ListModel {
