@@ -13,6 +13,7 @@ Item {
     property int text_padding: 10
 
     ColumnLayout {
+        z: 1
         anchors.rightMargin: tile_spacing
         anchors.leftMargin: tile_spacing
         anchors.bottomMargin: tile_spacing
@@ -27,6 +28,7 @@ Item {
             Layout.fillWidth: true
             tile_text: qsTr("The Pinkie Restaurant")
             tile_text_spacing: 50
+            tile_color: '#2ecc71'
         }
 
         RowLayout {
@@ -41,6 +43,7 @@ Item {
                 tile_text_max_size: tile_text_max_size
                 tile_icon_svg: 'images/intro/noodles.svg'
                 tile_icon_spacing: 0.2*width
+                tile_color: '#3498db'
             }
 
             GenericTileIcon {
@@ -51,6 +54,7 @@ Item {
                 tile_text_max_size: tile_text_max_size
                 tile_icon_svg: 'images/intro/takeaway.svg'
                 tile_icon_spacing: 0.2*width
+                tile_color: '#2980b9'
             }
         }
 
@@ -59,6 +63,13 @@ Item {
             Layout.preferredHeight: intro_form.height/14
             Layout.fillWidth: true
             tile_text: intro_form.cur_clock
+            tile_color: '#2ecc71'
         }
+    }
+
+    Rectangle {
+        id: intro_background
+        anchors.fill: parent
+        color: '#34495e'
     }
 }

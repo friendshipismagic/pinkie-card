@@ -1,4 +1,5 @@
 import QtQuick 2.7
+import QtGraphicalEffects 1.0
 
 Item {
     id: generic_tile
@@ -8,6 +9,7 @@ Item {
     property color tile_color: 'grey'
     property string tile_icon_svg: 'images/intro/noodles.svg'
     property int tile_icon_spacing: 100
+    property int tile_shadow_size: 10
 
     Text {
         id: main_text
@@ -49,6 +51,21 @@ Item {
         id: background
         anchors.fill: parent
         color: tile_color
+        anchors.rightMargin: tile_shadow_size
+        anchors.leftMargin: tile_shadow_size
+        anchors.bottomMargin: tile_shadow_size
+        anchors.topMargin: tile_shadow_size
         z: 0
+    }
+
+    DropShadow {
+        id: tile_shadow
+        anchors.fill: background
+        horizontalOffset: 5
+        radius: 8
+        verticalOffset: horizontalOffset
+        samples: 17
+        color: "#80000000"
+        source: background
     }
 }
