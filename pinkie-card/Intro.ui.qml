@@ -33,20 +33,22 @@ Item {
             id: buttons_layout
             spacing: tile_spacing
 
-            GenericTile {
+            GenericTileIcon {
                 id: here
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 tile_text: qsTr("For here")
                 tile_text_max_size: tile_text_max_size
+                tile_icon_svg: 'images/intro/noodles.svg'
             }
 
-            GenericTile {
+            GenericTileIcon {
                 id: to_go
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 tile_text: qsTr("To Go")
                 tile_text_max_size: tile_text_max_size
+                tile_icon_svg: 'images/intro/takeaway.svg'
             }
         }
 

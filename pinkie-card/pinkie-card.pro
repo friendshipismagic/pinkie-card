@@ -32,4 +32,5 @@ DISTFILES += \
     models/LanguageModel.qml \
     FlagModal.ui.qml \
     Intro.ui.qml \
-    GenericTile.ui.qml
+    GenericTile.ui.qml \
+    GenericTileIcon.ui.qml
