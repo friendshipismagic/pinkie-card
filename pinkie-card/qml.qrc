@@ -8,9 +8,9 @@
         <file>models/LanguageModel.qml</file>
         <file>FlagModal.ui.qml</file>
         <file>Intro.ui.qml</file>
-        <file>GenericTile.ui.qml</file>
+        <file>GenericTile.qml</file>
         <file>images/intro/takeaway.svg</file>
         <file>images/intro/noodles.svg</file>
-        <file>GenericTileIcon.ui.qml</file>
+        <file>GenericTileIcon.qml</file>
     </qresource>
 </RCC>

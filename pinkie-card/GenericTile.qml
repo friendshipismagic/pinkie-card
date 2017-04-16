@@ -31,16 +31,6 @@ Item {
         z: 1
     }
 
-    Image {
-        id: icon
-        fillMode: Image.PreserveAspectFit
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
-        smooth: true
-        z: 1
-        source: tile_icon_svg
-    }
-
     Rectangle {
         id: background
         anchors.fill: parent
