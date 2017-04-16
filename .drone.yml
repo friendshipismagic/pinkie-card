@@ -13,7 +13,7 @@ pipeline:
 
   telegram:
     image: appleboy/drone-telegram
-    token: ${TGBOT_TOKEN}
+    secrets: [ TELEGRAM_TOKEN  ]
     to:
       - "-172113772"
     document:
