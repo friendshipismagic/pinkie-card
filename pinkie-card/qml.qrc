@@ -6,9 +6,9 @@
         <file>TakeAway.qml</file>
         <file>TakeAwayTile.qml</file>
         <file>TakeAwayTileForm.ui.qml</file>
-        <file>StartersModel.qml</file>
-        <file>DishesModel.qml</file>
-        <file>DessertsModel.qml</file>
+        <file>models/StartersModel.qml</file>
+        <file>models/DishesModel.qml</file>
+        <file>models/DessertsModel.qml</file>
         <file>images/dishes/dish_base.jpg</file>
         <file>images/flags/United_States.svg</file>
         <file>images/flags/France.svg</file>

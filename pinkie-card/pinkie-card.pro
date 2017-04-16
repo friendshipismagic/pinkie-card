@@ -33,9 +33,9 @@ DISTFILES += \
     TakeAway.qml \
     TakeAwayTileForm.ui.qml \
     TakeAwayTile.qml \
-    StartersModel.qml \
-    DishesModel.qml \
-    DessertsModel.qml \
+    models/StartersModel.qml \
+    models/DishesModel.qml \
+    models/DessertsModel.qml \
     images/dishes/dish_base.jpg \
     models/LanguageModel.qml \
     FlagModal.ui.qml \
