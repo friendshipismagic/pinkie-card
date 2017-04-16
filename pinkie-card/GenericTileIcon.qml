@@ -115,10 +115,7 @@ Item {
         id: background
         anchors.fill: parent
         color: tile_color
-        anchors.rightMargin: tile_shadow_size
-        anchors.leftMargin: tile_shadow_size
-        anchors.bottomMargin: tile_shadow_size
-        anchors.topMargin: tile_shadow_size
+        anchors.margins: tile_shadow_size
         z: 0
     }
 
