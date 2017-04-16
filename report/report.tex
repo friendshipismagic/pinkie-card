@@ -36,41 +36,38 @@ table et une application sur téléphone pour un client hors du restaurant, dés
 
 \subsection{Les pistes explorées}
 
-\begin{itemize}
-\item Design adapté à une tablette :
+\subsubsection{Design adapté à une tablette}
 
-La première piste de design est adaptée à un écran de tablette et utilise la taille de ce support pour proposer
+La première piste de design est adaptée à un écran de tablette. Elle utilise la taille de ce support pour proposer
 une interface originale et agréable en plus d'être fonctionnelle. Il est fait usage de métaphores qui rappellent
 les cartes de restaurant traditionnelles et la partie de l'interface qui exprime l'état courant de la commande
 a la forme d'une table de restaurant où les éléments choisis sont disposés.
 
-\item Design adapté à un téléphone :
+\subsubsection{Design adapté à un téléphone}
 
-Cette idée de design correspond à une implémentation sur téléphone. Sur un écran plutôt petit elle privilégie la
+Cette idée de design correspond à une implémentation sur téléphone. Sur un écran plutôt petit, elle privilégie la
 simplicité et la clarté en utilisant une interface de listes. Les boutons sont grands et occupent tout l'écran,
 il n'y a pas d'éléments de décoration.
 
-\item Design traditionnel :
+\subsubsection{Design traditionnel}
 
 Ce design est fondé sur l'idée d'émuler au maximum une carte de menu classique. La partie principale de l'interface
 prend la forme d'un menu traditionnel, et ce n'est qu'en touchant un élément qu'on peut accéder à des informations
 spécifiques et commander. Pour accentuer l'aspect <<~papier~>> de l'interface, on reprend des caractéristiques des
 liseuses électroniques comme les animations de tournage de page et la teinte du fond d'écran.
 
-\end{itemize}
-
 \subsection{Le design choisi}
 
 Le premier design proposé a été choisi pour l'interface principale du système. C'est celui qui permet d'apporter
 le plus de valeur ajoutée par rapport au système classique, et les contraintes techniques de son implémentation
 ne paraissent pas insurmontables. Les besoins de personnalisation et d'interactivité de l'interface sont bien remplis
-par le design. Le design est intuitif et ne nécessite pas de phase d'apprentissage pour être fonctionnel ; le 
+par le design. Le design est intuitif et ne nécessite pas de phase d'apprentissage pour être fonctionnel~: le
 principe de <<~recognition over recall~>> est respecté.
 
-Les objectifs les moins bien remplis par ce design sont les exigences de portabilité : pour être correctement utilisée
-l'interface doit être disposée sur un écran avec une résolution suffisante ; la taille de l'écran doit également
-être plutôt grande, c'est-à-dire au moins correspondre à un format tablette. Ce design n'est pas adapté au déploiement
-d'une application pour téléphone que les clients pourraient installer sur leurs propres appareils.
+Les objectifs les moins bien remplis par ce design sont les exigences de portabilité~: pour être correctement utilisée,
+l'interface doit être disposée sur un grand écran, autant en taille physique que en définition. Ce design n'est donc
+efficace que sur une tablette au minimum, il n'est donc pas destiné pour être utilisé par les clients sur leur propre
+téléphone.
 
 Pour répondre à ce dernier point, une version alternative de l'interface, plus sobre et suivant le deuxième design,
 sera développée.
@@ -80,7 +77,7 @@ sera développée.
 Il n'a pas été possible de concilier tous les différents besoins dans un design unique. La difficulté fut de proposer
 un aspect et des fonctionnalités suffisamment attrayants pour justifier un passage à un système numérique au niveau
 de la carte des menus pour les clients sur place, et qui pourrait en même temps être portés sur les machines
-personnelles des clients qui commande à distance.
+personnelles des clients qui commandent à distance.
 
 La solution est de proposer deux clients différents, avec le gros du développement dédié à l'interface principale
 pour tablette. Cela ne propage pas une redondance à tout le système puisque la partie logique et celle présentée
@@ -88,13 +85,14 @@ au personnel du restaurant reste unique.
 
 \subsection{Fonctionnement du design}
 
-Dans cette partie on explique en détail l'interface principale retenue et son fonctionnement.
+Cette partie explique en détail l'interface principale retenue et son fonctionnement : interactions, concepts, ...
 
 \subsubsection{L'écran d'introduction}
 
 L'écran d'introduction est ce qui est présenté avant le début de l'interaction d'un utilisateur avec le système.
 L'utilisateur est invité à choisir entre <<~sur place~>> et <<~à emporter~>> pour commencer sa commande. La langue par
-défaut est le français mais un bouton drapeau est affiché dans un coin est permet de changer la langue de l'interface.
+défaut est le français, mais un bouton avec une apparence de drapeau est affiché dans un coin. Celui-ci permet de
+changer la langue de l'interface.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{intro_screen.jpg}
@@ -151,8 +149,8 @@ chacune à une option. Dans le cas de notre steak, trois zones seraient présent
 
 \subsubsection{L'écran après avoir choisi <<~à emporter~>>}
 
-Sur cet écran l'interface est plus sommaire et les articles sont présentés dans une liste hiérarchisée en
-sous-catégories. Le système d'écran modal du mode <<~sur place~>> est aussi présent.
+L'interface est plus sommaire et fonctionnelle sur cet écran~: les articles sont présentés dans une liste hiérarchisée
+en sous-catégories. Le système d'écran modal du mode <<~sur place~>> est aussi présent.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{takeaway_screen.jpg}
@@ -167,8 +165,8 @@ Après avoir validé la commande, un écran présentant un récapitulatif de la 
 
 \subsubsection{Écran final}
 
-Après la validation de la commande un écran de remerciement est affiché. On donne une estimation du temps d'attente
-avant le service, est un champ pour afficher des informations quelconques est présent.
+Après la validation de la commande, un écran de remerciement est affiché où l'on donne une estimation du temps
+d'attente avant le service. Un champ pour fournir des informations supplémentaires au restaurant est présent.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{final_screen.jpg}
