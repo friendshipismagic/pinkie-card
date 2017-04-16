@@ -13,5 +13,6 @@
         <file>images/dishes/carottes.jpg</file>
         <file>images/dishes/celeri_remoulade.jpg</file>
         <file>main.cpp</file>
+        <file>CategoryDelegate.qml</file>
     </qresource>
 </RCC>

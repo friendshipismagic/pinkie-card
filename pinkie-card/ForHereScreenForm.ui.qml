@@ -84,7 +84,7 @@ Item {
         id: rightList
         x: 330
         y: 100
-        width: 60
+        width: 100
         anchors.top: parent.top
         anchors.topMargin: 100
         anchors.bottom: parent.bottom
@@ -100,7 +100,6 @@ Item {
                 Rectangle {
                     width: 40
                     height: 40
-                    color: colorCode
                 }
 
                 Text {
