@@ -9,6 +9,7 @@ Item {
     anchors.fill: parent
     property string cur_clock: "13:37"
     property int tile_spacing: 15
+    property int tile_text_max_size: 72
     property int text_padding: 10
 
     ColumnLayout {
@@ -36,40 +37,20 @@ Item {
             id: buttons_layout
             spacing: tile_spacing
 
-            Button {
-                text: qsTr("For here")
+            GenericTile {
+                id: here
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                background: Rectangle {
-                    gradient: Gradient {
-                        GradientStop {
-                            position: 0
-                            color: Button.down ? "#e67e22" : "#e67e22"
-                        }
-                        GradientStop {
-                            position: 1
-                            color: Button.down ? "#d35400" : "#d35400"
-                        }
-                    }
-                }
+                tile_text: qsTr("For here")
+                tile_text_max_size: tile_text_max_size
             }
 
-            Button {
-                text: qsTr("To go")
+            GenericTile {
+                id: to_go
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                background: Rectangle {
-                    gradient: Gradient {
-                        GradientStop {
-                            position: 0
-                            color: Button.down ? "#f1c40f" : "#f1c40f"
-                        }
-                        GradientStop {
-                            position: 1
-                            color: Button.down ? "#f39c12" : "#f39c12"
-                        }
-                    }
-                }
+                tile_text: qsTr("To Go")
+                tile_text_max_size: tile_text_max_size
             }
         }
 
