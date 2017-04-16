@@ -36,4 +36,9 @@ DISTFILES += \
     StartersModel.qml \
     DishesModel.qml \
     DessertsModel.qml \
-    images/dishes/dish_base.jpg
+    images/dishes/dish_base.jpg \
+    models/LanguageModel.qml \
+    FlagModal.ui.qml \
+    Intro.ui.qml \
+    GenericTileIcon.qml \
+    GenericTile.qml
