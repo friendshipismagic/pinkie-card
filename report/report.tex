@@ -90,54 +90,64 @@ au personnel du restaurant reste unique.
 
 Dans cette partie on explique en détail l'interface principale retenue et son fonctionnement.
 
-\begin{itemize}
-
-\item L'écran d'introduction :
+\subsubsection{L'écran d'introduction}
 
 L'écran d'introduction est ce qui est présenté avant le début de l'interaction d'un utilisateur avec le système.
 L'utilisateur est invité à choisir entre <<~sur place~>> et <<~à emporter~>> pour commencer sa commande. La langue par
 défaut est le français mais un bouton drapeau est affiché dans un coin est permet de changer la langue de l'interface.
 
-\includegraphics[width=13cm]{intro_screen.jpg}
+\begin{center}
+	\includegraphics[width=\textwidth]{intro_screen.jpg}
+\end{center}
 
 Une disposition différente a également été envisagée :
 
-\includegraphics[width=13cm]{alt_intro_screen.jpg}
+\begin{center}
+	\includegraphics[width=\textwidth]{alt_intro_screen.jpg}
+\end{center}
 
-\item L'écran principal après avoir choisi <<~sur place~>> :
+\subsubsection{L'écran principal après avoir choisi <<~sur place~>>}
 
 Cette partie de l'interface repose sur deux <<~decks~>> : l'un en bas de l'écran et l'autre à droite. Celui de droite
 permet de sélectionner le sous-menu correspondant à un type d'article, par exemple plats, desserts, boissons. Celui
 du bas permet de sélectionner un article au sein d'une catégorie, par exemple coq au vin, croque-monsieur. Le bouton
 drapeau reste présent sur cet écran comme sur tous les autres de l'interface.
 
-\includegraphics[width=13cm]{in_place_screen1.jpg}
+\begin{center}
+	\includegraphics[width=\textwidth]{in_place_screen1.jpg}
+\end{center}
 
 Quand on clique sur un article, un écran modal s'ouvre et affiche des détails sur l'article et permet de préciser
 quelques éléments (par exemple la cuisson pour une viande) avant de l'ajouter à la commande.
 
-\includegraphics[width=13cm]{in_place_screen2.jpg}
+\begin{center}
+	\includegraphics[width=\textwidth]{in_place_screen2.jpg}
+\end{center}
 
-\item L'écran après avoir choisi <<~à emporter~>> :
+\subsubsection{L'écran après avoir choisi <<~à emporter~>>}
 
 Sur cet écran l'interface est plus sommaire et les articles sont présentés dans une liste hiérarchisée en
 sous-catégories. Le système d'écran modal du mode <<~sur place~>> est aussi présent.
 
-\includegraphics[width=13cm]{takeaway_screen.jpg}
+\begin{center}
+	\includegraphics[width=\textwidth]{takeaway_screen.jpg}
+\end{center}
 
-\item Écran de confirmation :
+\subsubsection{Écran de confirmation}
 Après avoir validé la commande, un écran présentant un récapitulatif de la commande invite à confirmer.
 
-\includegraphics[width=13cm]{confirmation_screen.jpg}
+\begin{center}
+	\includegraphics[width=\textwidth]{confirmation_screen.jpg}
+\end{center}
 
-\item Écran final :
+\subsubsection{Écran final}
 
 Après la validation de la commande un écran de remerciement est affiché. On donne une estimation du temps d'attente
 avant le service, est un champ pour afficher des informations quelconques est présent.
 
-\includegraphics[width=13cm]{final_screen.jpg}
-
-\end{itemize}
+\begin{center}
+	\includegraphics[width=\textwidth]{final_screen.jpg}
+\end{center}
 
 \section{Prototype}
 
