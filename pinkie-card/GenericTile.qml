@@ -21,10 +21,7 @@ Item {
         font.pixelSize: tile_text_max_size
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        anchors.top: background.top
-        anchors.right: background.right
-        anchors.left: background.left
-        anchors.bottom: background.bottom
+        anchors.fill: background
         anchors.topMargin: tile_text_spacing_vertical
         anchors.leftMargin: tile_text_spacing_horizontal
         anchors.rightMargin: tile_text_spacing_horizontal
