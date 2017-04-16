@@ -60,20 +60,5 @@ Item {
             Layout.fillWidth: true
             tile_text: intro_form.cur_clock
         }
-        /*
-        Text {
-            id: clock
-            y: 446
-            height: 0
-            text: intro_form.cur_clock
-            padding: text_padding
-            Layout.fillWidth: true
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            z: 1
-            font.pixelSize: 12
-        }
-        */
-
     }
 }
