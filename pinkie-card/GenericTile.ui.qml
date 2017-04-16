@@ -5,7 +5,7 @@ Item {
     property int tile_text_spacing: 20
     property string tile_text: 'Tile'
     property int tile_text_max_size: 72
-    property string tile_color: 'grey'
+    property color tile_color: 'grey'
 
     Text {
         id: main_text
