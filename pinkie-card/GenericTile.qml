@@ -3,7 +3,8 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: generic_tile
-    property int tile_text_spacing: 20
+    property int tile_text_spacing_horizontal: 20
+    property int tile_text_spacing_vertical: tile_text_spacing_horizontal
     property string tile_text: 'Tile'
     property int tile_text_max_size: 72
     property color tile_color: 'grey'
@@ -20,14 +21,14 @@ Item {
         font.pixelSize: tile_text_max_size
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        anchors.top: parent.top
-        anchors.right: parent.right
-        anchors.left: parent.left
-        anchors.bottom: parent.bottom
-        anchors.topMargin: tile_text_spacing
-        anchors.leftMargin: tile_text_spacing
-        anchors.rightMargin: tile_text_spacing
-        anchors.bottomMargin: tile_text_spacing
+        anchors.top: background.top
+        anchors.right: background.right
+        anchors.left: background.left
+        anchors.bottom: background.bottom
+        anchors.topMargin: tile_text_spacing_vertical
+        anchors.leftMargin: tile_text_spacing_horizontal
+        anchors.rightMargin: tile_text_spacing_horizontal
+        anchors.bottomMargin: tile_text_spacing_vertical
         z: 1
     }
 
