@@ -26,6 +26,7 @@ Item {
             Layout.preferredHeight: intro_form.height/6
             Layout.fillWidth: true
             tile_text: qsTr("The Pinkie Restaurant")
+            tile_text_spacing: 50
         }
 
         RowLayout {
@@ -51,7 +52,7 @@ Item {
 
         GenericTile {
             id: clock
-            Layout.preferredHeight: intro_form.height/10
+            Layout.preferredHeight: intro_form.height/14
             Layout.fillWidth: true
             tile_text: intro_form.cur_clock
         }
