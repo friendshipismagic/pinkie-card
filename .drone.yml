@@ -9,7 +9,7 @@ pipeline:
   report:
     image: blang/latex
     commands:
-      - cd report && pdflatex report.tex
+      - cd report && pdflatex report.tex && pdflatex report.tex
 
   telegram:
     image: appleboy/drone-telegram
