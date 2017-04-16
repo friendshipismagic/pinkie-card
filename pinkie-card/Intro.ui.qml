@@ -40,6 +40,7 @@ Item {
                 tile_text: qsTr("For here")
                 tile_text_max_size: tile_text_max_size
                 tile_icon_svg: 'images/intro/noodles.svg'
+                tile_icon_spacing: 0.2*width
             }
 
             GenericTileIcon {
@@ -49,6 +50,7 @@ Item {
                 tile_text: qsTr("To Go")
                 tile_text_max_size: tile_text_max_size
                 tile_icon_svg: 'images/intro/takeaway.svg'
+                tile_icon_spacing: 0.2*width
             }
         }
 

@@ -7,6 +7,7 @@ Item {
     property int tile_text_max_size: 72
     property string tile_color: 'grey'
     property string tile_icon_svg: 'images/intro/noodles.svg'
+    property int tile_icon_spacing: 100
 
     Text {
         id: main_text
@@ -32,6 +33,11 @@ Item {
 
     Image {
         id: icon
+        antialiasing: true
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        anchors.leftMargin: tile_icon_spacing
+        anchors.bottomMargin: tile_icon_spacing
         fillMode: Image.PreserveAspectFit
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
