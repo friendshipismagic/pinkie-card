@@ -21,16 +21,11 @@ Item {
 
         anchors.fill: parent
 
-        Text {
-            id: title
-            text: qsTr("The Pinkie Restaurant")
-            padding: text_padding
+        GenericTile {
+            id: restaurant_name
+            Layout.preferredHeight: intro_form.height/6
             Layout.fillWidth: true
-            z: 1
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            visible: true
-            font.pixelSize: 12
+            tile_text: qsTr("The Pinkie Restaurant")
         }
 
         RowLayout {
@@ -54,6 +49,13 @@ Item {
             }
         }
 
+        GenericTile {
+            id: clock
+            Layout.preferredHeight: intro_form.height/10
+            Layout.fillWidth: true
+            tile_text: intro_form.cur_clock
+        }
+        /*
         Text {
             id: clock
             y: 446
@@ -66,6 +68,7 @@ Item {
             z: 1
             font.pixelSize: 12
         }
+        */
 
     }
 }
