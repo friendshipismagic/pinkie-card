@@ -1,7 +1,7 @@
 import QtQuick 2.7
 
 Item {
-    id: item1
+    id: generic_tile
     property int tile_text_spacing: 20
     property string tile_text: 'Tile'
     property int tile_text_max_size: 72
