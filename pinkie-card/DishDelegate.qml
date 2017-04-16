@@ -1,20 +1,23 @@
 import QtQuick 2.7
 
-Image {
-    property int delegateWidth: 100
-    id: image1
-    width: delegateWidth
+Item {
     anchors.top: parent.top
     anchors.bottom: parent.bottom
-    anchors.bottomMargin: caption.height
-    fillMode: Image.PreserveAspectFit
-    source: imageSource
+    height: parent.height
+    width: image.width
+
+    Image {
+        id: image
+        fillMode: Image.PreserveAspectFit
+        source: imageSource
+        anchors.bottom: caption.top
+        anchors.top: parent.top
+    }
 
     Text {
         id: caption
         text: name
-        width: delegateWidth
-        anchors.top: parent.bottom
         elide: Text.ElideMiddle
+        anchors.bottom: parent.bottom
     }
 }

@@ -13,6 +13,7 @@ Item {
         x: 30
         y: 329
         height: 100
+        contentHeight: 100
         anchors.right: parent.right
         anchors.rightMargin: 100
         anchors.left: parent.left
