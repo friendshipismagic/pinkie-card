@@ -1,7 +1,6 @@
 import QtQuick 2.7
 
 Item {
-    id: item1
     property int tile_text_spacing: 20
     property string tile_text: 'Tile'
     property string tile_color: 'grey'
