@@ -54,7 +54,7 @@ Item {
         },
         Transition {
             from: "*"; to: "Pressed"
-            ColorAnimation { duration: 10 }
+            ColorAnimation { duration: 2 }
         }
     ]
 

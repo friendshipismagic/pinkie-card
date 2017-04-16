@@ -11,6 +11,7 @@ ApplicationWindow {
     title: qsTr("The Pinkie Card")
 
     property date cur_date: new Date()
+    property string cur_lang: 'images/flags/United_States.svg'
 
     Intro {
         cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
@@ -22,14 +23,14 @@ ApplicationWindow {
         width: 70
         height: 36
         anchors.right: parent.right
-        anchors.rightMargin: 20
+        anchors.rightMargin: 30
         anchors.top: parent.top
-        anchors.topMargin: 20
+        anchors.topMargin: 30
         z: 1
         onClicked: flag_popup.open()
 
         background: Image {
-            source: "images/flags/France.svg"
+            source: cur_lang
         }
     }
 
