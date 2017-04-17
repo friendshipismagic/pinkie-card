@@ -9,6 +9,9 @@ Item {
     height: 480
     property int tiles_width: 300
     property int tiles_height: 300
+    property int tile_spacing: 15
+    property int tile_text_max_size: 72
+    property int text_padding: 10
 
     Text {
         id: main_title
@@ -26,21 +29,19 @@ Item {
 
         Item {
             id: starters_page
-            Text {
+            GenericTile {
                 id: starters_text
-                text: qsTr("Starters")
-                anchors.right: parent.right
-                anchors.rightMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                topPadding: 10
-                bottomPadding: this.topPadding
+                height: 50
+                tile_text: qsTr("Starters")
                 Layout.fillWidth: true
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
+                anchors.top: parent.top
+                anchors.right: parent.right
+                anchors.left: parent.left
+                anchors.topMargin: 0
+                anchors.rightMargin: 0
+                anchors.leftMargin: 0
             }
+
             GridView {
                 id: starters_grid
                 // empty = parent.width - cellWidth * Math.floor(parent.width/cellWidth)
@@ -69,21 +70,20 @@ Item {
 
         Item {
             id: dishes_page
-            Text {
+
+            GenericTile {
                 id: dishes_text
-                text: qsTr("Dishes")
-                anchors.right: parent.right
-                anchors.rightMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                topPadding: 10
-                bottomPadding: this.topPadding
+                height: 50
+                tile_text: qsTr("Dishes")
                 Layout.fillWidth: true
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
+                anchors.top: parent.top
+                anchors.right: parent.right
+                anchors.left: parent.left
+                anchors.topMargin: 0
+                anchors.rightMargin: 0
+                anchors.leftMargin: 0
             }
+
             GridView {
                 id: dishes_grid
                 width: cellWidth * Math.floor(parent.width / cellWidth)
@@ -112,21 +112,20 @@ Item {
 
         Item {
             id: desserts_page
-            Text {
+
+            GenericTile {
                 id: desserts_text
-                text: qsTr("Desserts")
-                anchors.right: parent.right
-                anchors.rightMargin: 0
-                anchors.top: parent.top
-                anchors.topMargin: 0
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                topPadding: 10
-                bottomPadding: this.topPadding
+                height: 50
+                tile_text: qsTr("Desserts")
                 Layout.fillWidth: true
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
+                anchors.top: parent.top
+                anchors.right: parent.right
+                anchors.left: parent.left
+                anchors.topMargin: 0
+                anchors.rightMargin: 0
+                anchors.leftMargin: 0
             }
+
             GridView {
                 id: desserts_grid
                 width: cellWidth * Math.floor(parent.width / cellWidth)
