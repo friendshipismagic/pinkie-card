@@ -4,8 +4,6 @@
         <file>qtquickcontrols2.conf</file>
         <file>TakeAwayForm.ui.qml</file>
         <file>TakeAway.qml</file>
-        <file>TakeAwayTile.qml</file>
-        <file>TakeAwayTileForm.ui.qml</file>
         <file>models/StartersModel.qml</file>
         <file>models/DishesModel.qml</file>
         <file>models/DessertsModel.qml</file>

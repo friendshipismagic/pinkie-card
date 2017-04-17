@@ -11,6 +11,8 @@ Item {
     property int tile_spacing: 15
     property int tile_text_max_size: 72
     property int text_padding: 10
+    property alias button_here: here
+    property alias button_togo: to_go
 
     ColumnLayout {
         z: 1

@@ -12,6 +12,7 @@ Item {
     // Icon related
     property string tile_icon_svg: 'images/intro/noodles.svg'
     property int tile_icon_spacing: 100
+    property bool tile_icon_fullscreen: false
     // Colors related
     property color tile_color: 'grey'
     property color tile_color_hovered: 'grey'
@@ -61,7 +62,7 @@ Item {
     //Mouse area to react on click events
     MouseArea {
         hoverEnabled: true
-        z: 2
+        z: 3
         anchors.fill: background
         onEntered: { generic_tile.state='Hovering' }
         onExited: { generic_tile.state='' }
@@ -79,7 +80,7 @@ Item {
         id: main_text
         color: "#d9000000"
         text: qsTr(tile_text)
-        anchors.bottom: icon.top
+        anchors.bottom: tile_icon_fullscreen ? parent.bottom : icon.top
         anchors.bottomMargin: 0
         fontSizeMode: Text.Fit
         clip: true
@@ -94,7 +95,7 @@ Item {
         anchors.topMargin: tile_text_spacing
         anchors.leftMargin: tile_text_spacing
         anchors.rightMargin: tile_text_spacing
-        z: 1
+        z: 2
     }
 
     Image {
@@ -102,9 +103,9 @@ Item {
         antialiasing: true
         anchors.left: parent.left
         anchors.bottom: parent.bottom
-        anchors.leftMargin: tile_icon_spacing
-        anchors.bottomMargin: tile_icon_spacing
-        fillMode: Image.PreserveAspectFit
+        anchors.leftMargin: tile_icon_fullscreen ? 0 : tile_icon_spacing
+        anchors.bottomMargin: tile_icon_fullscreen ? 0 : tile_icon_spacing
+        fillMode: tile_icon_fullscreen ? Image.PreserveAspectCrop : Image.PreserveAspectFit
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         z: 1
