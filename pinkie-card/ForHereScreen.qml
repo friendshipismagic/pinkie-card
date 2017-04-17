@@ -2,14 +2,16 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import "models"
 
-Item {
+Rectangle {
     id: forHereScreen
     anchors.fill: parent
+    color: '#34495e'
 
-    property int marginValue
 
-    property alias dishDelegate: bottomPane.delegate
-    property alias categoryDelegate: rightPane.delegate
+    property int marginValue: 10
+
+//    property alias dishDelegate: bottomPane.delegate
+//    property alias categoryDelegate: rightPane.delegate
 
     GridLayout {
         anchors.fill: parent
@@ -24,18 +26,25 @@ Item {
             Layout.fillWidth: true
         }
 
-        ListView {
-            id: rightPane
-            model: DishesModel { }
+
+        Rectangle {
             Layout.preferredWidth: 100
-            Layout.fillHeight:true
+            Layout.fillHeight: true
+            color: "blue"
         }
 
-        ListView {
-            id: bottomPane
-            model: DishesModel { }
+        Rectangle {
             Layout.preferredHeight: 100
             Layout.fillWidth: true
+            color: "red"
+            ListView {
+                anchors.fill: parent
+                orientation: Qt.Horizontal
+                model: DishesModel { }
+                delegate: DishDelegate {
+                    height: parent.height
+                }
+            }
         }
     }
 }

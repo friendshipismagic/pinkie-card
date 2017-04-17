@@ -13,7 +13,6 @@
         <file>images/intro/noodles.svg</file>
         <file>GenericTileIcon.qml</file>
         <file>ForHereScreen.qml</file>
-        <file>ForHereScreenDuplicate.qml</file>
         <file>images/restaurant-table-set.jpg</file>
         <file>DishDelegate.qml</file>
         <file>images/dishes/salade.jpg</file>
