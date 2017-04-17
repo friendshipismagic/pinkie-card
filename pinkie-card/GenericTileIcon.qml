@@ -101,13 +101,13 @@ Item {
     Image {
         id: icon
         antialiasing: true
-        anchors.left: parent.left
-        anchors.bottom: parent.bottom
+        anchors.left: background.left
+        anchors.bottom: background.bottom
         anchors.leftMargin: tile_icon_fullscreen ? 0 : tile_icon_spacing
         anchors.bottomMargin: tile_icon_fullscreen ? 0 : tile_icon_spacing
         fillMode: tile_icon_fullscreen ? Image.PreserveAspectCrop : Image.PreserveAspectFit
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: background.verticalCenter
+        anchors.horizontalCenter: background.horizontalCenter
         z: 1
         source: tile_icon_svg
     }
