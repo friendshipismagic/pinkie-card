@@ -10,9 +10,6 @@ Rectangle {
 
     property int marginValue: 10
 
-//    property alias dishDelegate: bottomPane.delegate
-//    property alias categoryDelegate: rightPane.delegate
-
     GridLayout {
         anchors.fill: parent
         anchors.margins: marginValue
@@ -27,16 +24,32 @@ Rectangle {
         }
 
 
-        Rectangle {
+        Item {
             Layout.preferredWidth: 100
-            Layout.fillHeight: true
-            color: "blue"
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredHeight: rightList.contentHeight
+
+            ListView {
+                id: rightList
+                anchors.fill: parent
+                orientation: Qt.Vertical
+                spacing: 5
+                model: DishesModel {
+
+                }
+                delegate: DishDelegate {
+                    width: parent.width
+                    height: 100
+                }
+            }
         }
 
         Item {
             Layout.preferredHeight: 100
-            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: bottomList.contentWidth
             ListView {
+                id: bottomList
                 anchors.fill: parent
                 orientation: Qt.Horizontal
                 spacing: 5

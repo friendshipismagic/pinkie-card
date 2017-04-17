@@ -12,7 +12,8 @@ ItemDelegate {
             Layout.fillWidth: true
             Layout.fillHeight: true
             source: imageSource
-            fillMode: Image.PreserveAspectFit
+            fillMode: Image.Stretch
+            Layout.margins: 5
         }
 
         Text {
