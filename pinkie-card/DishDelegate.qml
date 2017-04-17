@@ -1,11 +1,45 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.0
 
-GenericTileIcon {
-    tile_text: name
-    tile_icon_svg: imageSource
-    tile_icon_spacing: 0
-    tile_shadow_size: 0
-    tile_text_spacing: 0
+ItemDelegate {
+    id:control
+    text: name
+
+    contentItem: ColumnLayout {
+        anchors.fill: parent
+        Image {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            source: imageSource
+            fillMode: Image.PreserveAspectFit
+        }
+
+        Text {
+                  rightPadding: control.spacing
+                  text: control.text
+                  fontSizeMode: Text.Fit
+                  font: control.font
+                  color: control.enabled ? (control.down ? "#17a81a" : "#21be2b") : "#bdbebf"
+                  elide: Text.ElideRight
+                  visible: control.text
+                  horizontalAlignment: Text.AlignHCenter
+                  verticalAlignment: Text.AlignVCenter
+                  Layout.fillWidth: true
+        }
+    }
+
+    background: Rectangle {
+              implicitWidth: 100
+              implicitHeight: 40
+              opacity: enabled ? 1 : 0.3
+              color: control.down ? "#dddedf" : "#eeeeee"
+
+              Rectangle {
+                  width: parent.width
+                  height: 1
+                  color: control.down ? "#17a81a" : "#21be2b"
+                  anchors.bottom: parent.bottom
+              }
+          }
 }
-
