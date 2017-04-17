@@ -65,6 +65,7 @@ Rectangle {
             Layout.preferredHeight: 100
             Layout.alignment: Qt.AlignCenter
             Layout.preferredWidth: bottomList.contentWidth
+            Layout.fillWidth: true
             ListView {
                 id: bottomList
                 anchors.fill: parent
