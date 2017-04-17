@@ -10,6 +10,37 @@ ApplicationWindow {
     height: 480
     title: qsTr("The Pinkie Card")
 
+    ForHereScreen {
+        visible: true
+        anchors.fill: parent
+        bottomList.model: startersList
+        bottomList.delegate: DishDelegate {
+        }
+        bottomList.spacing: 10
+        rightList.model: startersList
+        rightList.delegate: CategoryDelegate {
+
+        }
+        rightList.spacing: 10
+    }
+
+    ListModel {
+        id: startersList
+        ListElement {
+            name: "Salade"
+            imageSource: "images/dishes/salade.jpg"
+        }
+        ListElement {
+            name: "Carottes"
+            imageSource: "images/dishes/carottes.jpg"
+        }
+        ListElement {
+            name: "Céleri Rémoulade"
+            imageSource: "images/dishes/celeri_remoulade.jpg"
+        }
+    }
+
+
     property date cur_date: new Date()
     property string cur_lang: 'images/flags/United_States.svg'
 
