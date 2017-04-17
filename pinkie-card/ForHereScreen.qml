@@ -26,6 +26,11 @@ Rectangle {
             id: imageRectangle
             Layout.fillHeight: true
             Layout.fillWidth: true
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: parent.color = "red"
+            }
         }
 
 
@@ -40,17 +45,18 @@ Rectangle {
                 anchors.fill: parent
                 orientation: Qt.Vertical
                 spacing: 5
+                snapMode: ListView.SnapToItem
+                boundsBehavior: Flickable.OvershootBounds
                 model: MenuModel {
 
                 }
-                delegate: DishDelegate {
+                delegate: CategoryDelegate {
                     width: parent.width
                     height: 100
                 }
 
                 onCurrentIndexChanged: {
-//                    forHereScreen.state = states[currentIndex].name
-                    console.log("Current index: " + currentIndex)
+                    forHereScreen.state = forHereScreen.states[currentIndex].name
                 }
             }
         }
@@ -64,6 +70,8 @@ Rectangle {
                 anchors.fill: parent
                 orientation: Qt.Horizontal
                 spacing: 5
+                boundsBehavior: Flickable.DragOverBounds
+                snapMode: ListView.SnapToItem
                 model: starters
                 delegate: DishDelegate {
                     height: parent.height

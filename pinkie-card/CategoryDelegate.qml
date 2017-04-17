@@ -1,19 +1,10 @@
-import QtQuick 2.0
+import QtQuick 2.7
+import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.0
 
-Column {
-    anchors.left: parent.left
-    anchors.right: parent.right
-    spacing: 0
+ItemDelegate {
+    id:control
+    text: name
 
-    Image {
-        anchors.right: parent.right
-        anchors.left: parent.left
-        fillMode: Image.PreserveAspectFit
-        source: imageSource
-    }
-
-    Text {
-        text: name
-        elide: Text.ElideMiddle
-    }
+    onClicked: ListView.view.currentIndex = index
 }

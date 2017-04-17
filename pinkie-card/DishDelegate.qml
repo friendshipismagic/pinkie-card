@@ -5,6 +5,9 @@ import QtQuick.Controls 2.0
 ItemDelegate {
     id:control
     text: name
+    onPressed: {
+        console.log("hello");
+    }
 
     contentItem: ColumnLayout {
         anchors.fill: parent

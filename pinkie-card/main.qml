@@ -13,9 +13,6 @@ ApplicationWindow {
     ForHereScreen {
         visible: true
         z: 2
-
-//        dishDelegate: DishDelegate { }
-//        categoryDelegate: DishDelegate { }
     }
 
     property date cur_date: new Date()
