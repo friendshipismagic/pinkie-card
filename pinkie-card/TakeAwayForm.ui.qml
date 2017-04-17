@@ -13,11 +13,14 @@ Item {
     property int tile_text_max_size: 72
     property int text_padding: 10
 
-    Text {
+    GenericTile {
         id: main_title
-        text: qsTr("Take Away menu chooser")
+        height: 50
+        tile_text: qsTr("Take Away")
+        tile_shadow_size: 0
+        anchors.left: parent.left
         anchors.top: parent.top
-        anchors.topMargin: 20
+        anchors.leftMargin: 0
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
@@ -160,5 +163,12 @@ Item {
 
         anchors.bottom: swipe_view.bottom
         anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    Rectangle {
+        id: background
+        anchors.fill: parent
+        color: 'blue'
+        z: -1
     }
 }
