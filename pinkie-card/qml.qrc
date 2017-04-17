@@ -19,6 +19,7 @@
         <file>images/dishes/carottes.jpg</file>
         <file>images/dishes/celeri_remoulade.jpg</file>
         <file>CategoryDelegate.qml</file>
-        <file>models/DishesModel.qml</file>
+        <file>models/StarterModel.qml</file>
+        <file>models/MenuModel.qml</file>
     </qresource>
 </RCC>

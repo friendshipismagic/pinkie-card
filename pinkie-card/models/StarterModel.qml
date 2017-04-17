@@ -2,7 +2,6 @@ import QtQuick 2.0
 
 
 ListModel {
-    id: startersList
     ListElement {
         name: "Salade"
         imageSource: "images/dishes/salade.jpg"
