@@ -21,5 +21,8 @@
         <file>CategoryDelegate.qml</file>
         <file>models/StarterModel.qml</file>
         <file>models/MenuModel.qml</file>
+        <file>models/MainCourseModel.qml</file>
+        <file>models/DessertModel.qml</file>
+        <file>models/DrinkModel.qml</file>
     </qresource>
 </RCC>

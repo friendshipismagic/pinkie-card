@@ -34,7 +34,7 @@ Rectangle {
                 anchors.fill: parent
                 orientation: Qt.Vertical
                 spacing: 5
-                model: DishesModel {
+                model: MenuModel {
 
                 }
                 delegate: DishDelegate {
@@ -53,7 +53,9 @@ Rectangle {
                 anchors.fill: parent
                 orientation: Qt.Horizontal
                 spacing: 5
-                model: DishesModel { }
+                model: StarterModel {
+
+                }
                 delegate: DishDelegate {
                     height: parent.height
                     width: 100
@@ -61,4 +63,35 @@ Rectangle {
             }
         }
     }
+
+    states: [
+        State {
+            name: "STARTERS"
+            PropertyChanges {
+                target: bottomList;
+                model: StarterModel { }
+            }
+        },
+        State {
+                name: "MAINS"
+                PropertyChanges {
+                    target: bottomList;
+                    model: MainCourseModel { }
+                }
+            },
+        State {
+                name: "DESSERTS"
+                PropertyChanges {
+                    target: bottomList;
+                    model: DessertModel { }
+                }
+            },
+        State {
+                name: "DRINKS"
+                PropertyChanges {
+                    target: bottomList;
+                    model: DrinkModel { }
+                }
+            }
+    ]
 }

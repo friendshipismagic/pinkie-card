@@ -2,16 +2,19 @@ import QtQuick 2.0
 
 
 ListModel {
+
     ListElement {
-        name: "Salade"
+        name: qsTr("Salade")
         imageSource: "images/dishes/salade.jpg"
     }
+
     ListElement {
-        name: "Carottes"
+        name: qsTr("Carottes")
         imageSource: "images/dishes/carottes.jpg"
     }
+
     ListElement {
-        name: "Céleri Rémoulade"
+        name: qsTr("Céleri Rémoulade")
         imageSource: "images/dishes/celeri_remoulade.jpg"
     }
 }
