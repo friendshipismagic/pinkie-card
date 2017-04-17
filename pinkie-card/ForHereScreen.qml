@@ -33,16 +33,17 @@ Rectangle {
             color: "blue"
         }
 
-        Rectangle {
+        Item {
             Layout.preferredHeight: 100
             Layout.fillWidth: true
-            color: "red"
             ListView {
                 anchors.fill: parent
                 orientation: Qt.Horizontal
+                spacing: 5
                 model: DishesModel { }
                 delegate: DishDelegate {
                     height: parent.height
+                    width: 100
                 }
             }
         }
