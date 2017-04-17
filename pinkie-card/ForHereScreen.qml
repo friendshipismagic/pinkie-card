@@ -10,6 +10,11 @@ Rectangle {
 
     property int marginValue: 10
 
+    property var starters: StarterModel { }
+    property var mains: MainCourseModel { }
+    property var desserts: DessertModel { }
+    property var drinks: DrinkModel { }
+
     GridLayout {
         anchors.fill: parent
         anchors.margins: marginValue
@@ -28,6 +33,7 @@ Rectangle {
             Layout.preferredWidth: 100
             Layout.alignment: Qt.AlignCenter
             Layout.preferredHeight: rightList.contentHeight
+            Layout.fillHeight: true
 
             ListView {
                 id: rightList
@@ -41,6 +47,11 @@ Rectangle {
                     width: parent.width
                     height: 100
                 }
+
+                onCurrentIndexChanged: {
+//                    forHereScreen.state = states[currentIndex].name
+                    console.log("Current index: " + currentIndex)
+                }
             }
         }
 
@@ -53,9 +64,7 @@ Rectangle {
                 anchors.fill: parent
                 orientation: Qt.Horizontal
                 spacing: 5
-                model: StarterModel {
-
-                }
+                model: starters
                 delegate: DishDelegate {
                     height: parent.height
                     width: 100
@@ -69,28 +78,28 @@ Rectangle {
             name: "STARTERS"
             PropertyChanges {
                 target: bottomList;
-                model: StarterModel { }
+                model: starters
             }
         },
         State {
                 name: "MAINS"
                 PropertyChanges {
                     target: bottomList;
-                    model: MainCourseModel { }
+                    model: mains
                 }
             },
         State {
                 name: "DESSERTS"
                 PropertyChanges {
                     target: bottomList;
-                    model: DessertModel { }
+                    model: desserts
                 }
             },
         State {
                 name: "DRINKS"
                 PropertyChanges {
                     target: bottomList;
-                    model: DrinkModel { }
+                    model: drinks
                 }
             }
     ]
