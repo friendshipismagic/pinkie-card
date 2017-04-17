@@ -13,13 +13,12 @@
         <file>images/intro/noodles.svg</file>
         <file>GenericTileIcon.qml</file>
         <file>ForHereScreen.qml</file>
-        <file>ForHereScreenForm.ui.qml</file>
+        <file>ForHereScreenDuplicate.qml</file>
         <file>images/restaurant-table-set.jpg</file>
         <file>DishDelegate.qml</file>
         <file>images/dishes/salade.jpg</file>
         <file>images/dishes/carottes.jpg</file>
         <file>images/dishes/celeri_remoulade.jpg</file>
-        <file>main.cpp</file>
         <file>CategoryDelegate.qml</file>
         <file>models/DishesModel.qml</file>
     </qresource>

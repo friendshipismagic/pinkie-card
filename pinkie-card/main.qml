@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtQuick.Controls 2.1
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
 import QtQml 2.2
 
@@ -12,34 +12,11 @@ ApplicationWindow {
 
     ForHereScreen {
         visible: true
-        anchors.fill: parent
-        bottomList.model: startersList
-        bottomList.delegate: DishDelegate {
-        }
-        bottomList.spacing: 10
-        rightList.model: startersList
-        rightList.delegate: CategoryDelegate {
+        z: 2
 
-        }
-        rightList.spacing: 10
+        dishDelegate: DishDelegate { }
+        categoryDelegate: DishDelegate { }
     }
-
-    ListModel {
-        id: startersList
-        ListElement {
-            name: "Salade"
-            imageSource: "images/dishes/salade.jpg"
-        }
-        ListElement {
-            name: "Carottes"
-            imageSource: "images/dishes/carottes.jpg"
-        }
-        ListElement {
-            name: "Céleri Rémoulade"
-            imageSource: "images/dishes/celeri_remoulade.jpg"
-        }
-    }
-
 
     property date cur_date: new Date()
     property string cur_lang: 'images/flags/United_States.svg'
