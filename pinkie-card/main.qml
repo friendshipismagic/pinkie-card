@@ -30,6 +30,7 @@ ApplicationWindow {
 
             TakeAway {
                 onGoBack: main_page_stackview.pop()
+                onGoCo: main_page_stackview.push(checkout_component)
             }
         }
 
