@@ -9,6 +9,7 @@ Item {
     property int tile_text_spacing: 20
     property string tile_text: 'Tile'
     property int tile_text_max_size: 72
+    property bool tile_text_center: false
     // Icon related
     property string tile_icon_svg: 'images/intro/noodles.svg'
     property int tile_icon_spacing: 100
@@ -87,7 +88,7 @@ Item {
         font.weight: Font.Medium
         font.capitalization: Font.AllUppercase
         font.pixelSize: tile_text_max_size
-        verticalAlignment: Text.AlignTop
+        verticalAlignment: tile_text_center ? Text.AlignVCenter : Text.AlignTop
         horizontalAlignment: Text.AlignHCenter
         anchors.top: parent.top
         anchors.right: parent.right
