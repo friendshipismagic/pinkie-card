@@ -11,7 +11,7 @@ ApplicationWindow {
     title: qsTr("The Pinkie Card")
 
     property date cur_date: new Date()
-    property string cur_lang: 'images/flags/United_States.svg'
+    property string cur_lang: 'images/flags/France.svg'
 
     StackView {
         id: main_page_stackview
@@ -30,6 +30,7 @@ ApplicationWindow {
 
             TakeAway {
                 onGoBack: main_page_stackview.pop()
+                onGoCo: main_page_stackview.push(checkout_component)
             }
         }
 
@@ -47,7 +48,15 @@ ApplicationWindow {
 
             Checkout {
                 onGoBack: main_page_stackview.pop()
-                onGoEnd: main_page_stackview.pop() // TODO
+                onGoEnd: main_page_stackview.push(final_component)
+            }
+        }
+
+        Component {
+            id: final_component
+
+            Final {
+                onGoBack: main_page_stackview.pop()
             }
         }
 

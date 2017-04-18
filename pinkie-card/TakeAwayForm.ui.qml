@@ -18,7 +18,7 @@ Item {
 
     GenericTile {
         id: main_title
-        height: 50
+        height: 100
         tile_text: qsTr("Take Away")
         tile_shadow_size: 0
         anchors.left: parent.left
@@ -45,13 +45,13 @@ Item {
 
     GenericTileIcon {
         id: co_button
-        height: main_title.height
+        height: take_away_form.height / 7
         width: height
         anchors.right: parent.right
-        anchors.top: parent.top
+        anchors.bottom: parent.bottom
         tile_text: ''
         tile_color: '#34495e'
-        tile_icon_svg: 'images/left_arrow.svg'
+        tile_icon_svg: 'images/right_arrow.svg'
         tile_icon_spacing: 5
         tile_shadow_size: 10
         tile_text_spacing: 0
