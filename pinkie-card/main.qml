@@ -36,8 +36,13 @@ ApplicationWindow {
         Component {
             id: for_here_component
 
-            ForHereScreen {
-            }
+            ForHereScreen { }
+        }
+
+        Component {
+            id: checkout_component
+
+            CheckoutForm { }
         }
 
     }
