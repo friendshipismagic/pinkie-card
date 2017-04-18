@@ -10,9 +10,9 @@ Item {
 
     GenericTile {
         id: end_text
-        anchors.topMargin: 50
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.top
+        anchors.bottom: time_remaining_tile.top
+        anchors.bottomMargin: 50
         width: root_form.width * 0.8
         height: root_form.height / 6
         tile_text: qsTr("C'est parti !")
@@ -22,9 +22,7 @@ Item {
 
     GenericTile {
         id: time_remaining_tile
-        anchors.topMargin: 50
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: end_text.bottom
+        anchors.centerIn: parent
         width: root_form.width * 0.8
         height: root_form.height / 4
         tile_text: time_remaining

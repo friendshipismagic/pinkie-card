@@ -11,7 +11,7 @@ ApplicationWindow {
     title: qsTr("The Pinkie Card")
 
     property date cur_date: new Date()
-    property string cur_lang: 'images/flags/United_States.svg'
+    property string cur_lang: 'images/flags/France.svg'
 
     StackView {
         id: main_page_stackview
