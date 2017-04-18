@@ -21,7 +21,15 @@ ApplicationWindow {
         IntroForm {
             id: intro
             cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
-            button_togo.onClicked: main_page_stackview.push(Qt.resolvedUrl('TakeAway.qml'))
+            button_togo.onClicked: main_page_stackview.push(take_away_component)
+        }
+
+        Component {
+            id: take_away_component
+
+            TakeAway {
+                onGoBack: main_page_stackview.pop()
+            }
         }
 
     }

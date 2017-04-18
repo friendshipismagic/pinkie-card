@@ -21,5 +21,6 @@
         <file>DishModal.ui.qml</file>
         <file>GenericTileButton.qml</file>
         <file>Intro.qml</file>
+        <file>images/left_arrow.svg</file>
     </qresource>
 </RCC>

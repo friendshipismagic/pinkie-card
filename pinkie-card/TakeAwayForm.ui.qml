@@ -13,6 +13,7 @@ Item {
     property int tile_text_max_size: 72
     property int text_padding: 10
     property int popup_spacing: 100
+    property alias button_goback: back_button
 
     GenericTile {
         id: main_title
@@ -23,6 +24,20 @@ Item {
         anchors.top: parent.top
         anchors.leftMargin: 0
         anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    GenericTileIcon {
+        id: back_button
+        height: main_title.height
+        width: height
+        anchors.left: parent.left
+        anchors.top: parent.top
+        tile_text: ''
+        tile_color: '#34495e'
+        tile_icon_svg: 'images/left_arrow.svg'
+        tile_icon_spacing: 5
+        tile_shadow_size: 10
+        tile_text_spacing: 0
     }
 
     Popup {
