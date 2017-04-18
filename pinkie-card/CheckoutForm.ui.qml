@@ -4,15 +4,18 @@ import QtQuick.Controls 2.1
 import 'models/'
 
 Item {
+    id: root_form
     width: 640
     height: 480
+    property alias button_back: back_button
+    property alias button_end: ok_button
 
     GenericTile {
         id: title
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: parent.top
-        height: 50
+        height: parent.height / 8
         tile_text: qsTr("Checkout")
     }
 
@@ -27,6 +30,9 @@ Item {
         delegate: CheckoutDelegate {
             anchors.left: parent.left
             anchors.right: parent.right
+            anchors.leftMargin: 50
+            anchors.rightMargin: anchors.leftMargin
+            height: 80
         }
     }
 
@@ -42,7 +48,7 @@ Item {
 
         GenericTileButton {
             id: back_button
-            height: 100
+            height: root_form.height / 6
             Layout.fillWidth: true
             tile_text: "Go back"
             tile_text_max_size: dish_buttons_text_max_size
@@ -53,7 +59,7 @@ Item {
 
         GenericTileButton {
             id: ok_button
-            height: 100
+            height: back_button.height
             Layout.fillWidth: true
             tile_text: "Proceed"
             tile_text_max_size: dish_buttons_text_max_size

@@ -14,6 +14,7 @@ Item {
     property int text_padding: 10
     property int popup_spacing: 100
     property alias button_goback: back_button
+    property alias button_goco: co_button
 
     GenericTile {
         id: main_title
@@ -32,6 +33,21 @@ Item {
         height: main_title.height
         width: height
         anchors.left: parent.left
+        anchors.top: parent.top
+        tile_text: ''
+        tile_color: '#34495e'
+        tile_icon_svg: 'images/left_arrow.svg'
+        tile_icon_spacing: 5
+        tile_shadow_size: 10
+        tile_text_spacing: 0
+        z: 1
+    }
+
+    GenericTileIcon {
+        id: co_button
+        height: main_title.height
+        width: height
+        anchors.right: parent.right
         anchors.top: parent.top
         tile_text: ''
         tile_color: '#34495e'

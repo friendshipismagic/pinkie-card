@@ -36,13 +36,19 @@ ApplicationWindow {
         Component {
             id: for_here_component
 
-            ForHereScreen { }
+            ForHereScreen {
+                onGoBack: main_page_stackview.pop()
+                onGoCo: main_page_stackview.push(checkout_component)
+            }
         }
 
         Component {
             id: checkout_component
 
-            CheckoutForm { }
+            Checkout {
+                onGoBack: main_page_stackview.pop()
+                onGoEnd: main_page_stackview.pop() // TODO
+            }
         }
 
     }

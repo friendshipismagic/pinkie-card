@@ -7,6 +7,8 @@ Rectangle {
     anchors.fill: parent
     color: '#34495e'
 
+    signal goBack()
+    signal goCo()
 
     property int marginValue: 10
 
@@ -21,6 +23,37 @@ Rectangle {
         desserts,
         drinks
     ]
+
+    RowLayout {
+        id: buttons_layout
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        z: 2
+
+        GenericTileButton {
+            id: back_button
+            width: 200
+            height: 100
+            tile_text: "Go back"
+            tile_text_max_size: 30
+            tile_color: '#e67e22'
+            tile_color_hovered: '#f39c12'
+            tile_color_pressed: '#d35400'
+            onClicked: forHereScreen.goBack()
+        }
+
+        GenericTileButton {
+            id: co_button
+            width: 200
+            height: 100
+            tile_text: "Proceed"
+            tile_text_max_size: 30
+            tile_color: '#2ecc71'
+            tile_color_hovered: '#27ae60'
+            tile_color_pressed: '#16a085'
+            onClicked: forHereScreen.goCo()
+        }
+    }
 
     GridLayout {
         anchors.fill: parent
