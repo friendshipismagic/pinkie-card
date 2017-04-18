@@ -25,36 +25,6 @@ Rectangle {
         drinks
     ]
 
-//    RowLayout {
-//        id: buttons_layout
-//        anchors.right: parent.right
-//        anchors.bottom: parent.bottom
-//        z: 2
-
-//        GenericTileButton {
-//            id: back_button
-//            width: 200
-//            height: 100
-//            tile_text: "Go back"
-//            tile_text_max_size: 30
-//            tile_color: '#e67e22'
-//            tile_color_hovered: '#f39c12'
-//            tile_color_pressed: '#d35400'
-//            onClicked: forHereScreen.goBack()
-//        }
-
-//        GenericTileButton {
-//            id: co_button
-//            width: 200
-//            height: 100
-//            tile_text: "Proceed"
-//            tile_text_max_size: 30
-//            tile_color: '#2ecc71'
-//            tile_color_hovered: '#27ae60'
-//            tile_color_pressed: '#16a085'
-//            onClicked: forHereScreen.goCo()
-//        }
-//    }
 
     GridLayout {
         anchors.fill: parent
@@ -140,6 +110,9 @@ Rectangle {
         }
 
         Item {
+            Layout.margins: 10
+            Layout.preferredHeight: 50
+            Layout.fillWidth: true
             Button {
                 id: backControl
                 anchors.top: parent.top
@@ -147,10 +120,48 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.bottom: parent.bottom
 
+                text: qsTr("Go back")
+
                 background: Rectangle {
                     anchors.fill: parent
-                    color: down ? "grey" : "lightsteelblue"
+                    color: backControl.down ? "grey" : '#e67e22'
+                    radius: 4
                 }
+
+                contentItem: Text {
+                    text: backControl.text
+                    wrapMode: Text.WordWrap
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                onClicked: goBack()
+            }
+
+            Button {
+                id: contControl
+                anchors.top: parent.top
+                anchors.right: parent.right
+                anchors.left: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+
+                text: qsTr("Order")
+
+                background: Rectangle {
+                    anchors.fill: parent
+                    color: contControl.down ? "grey" : '#2ecc71'
+                    radius: 4
+                }
+
+                contentItem: Text {
+                    text: contControl.text
+                    wrapMode: Text.WordWrap
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+
+                onClicked: goCo()
             }
         }
     }
