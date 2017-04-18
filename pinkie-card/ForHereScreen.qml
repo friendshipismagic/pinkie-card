@@ -15,6 +15,13 @@ Rectangle {
     property var desserts: DessertModel { }
     property var drinks: DrinkModel { }
 
+    property var myModels: [
+        starters,
+        mains,
+        desserts,
+        drinks
+    ]
+
     GridLayout {
         anchors.fill: parent
         anchors.margins: marginValue
@@ -56,8 +63,7 @@ Rectangle {
                 }
 
                 onCurrentIndexChanged: {
-                    if (currentIndex > -1)
-                        forHereScreen.state = forHereScreen.states[currentIndex].name
+                    bottomList.model = myModels[currentIndex];
                 }
             }
         }
@@ -75,6 +81,8 @@ Rectangle {
                 boundsBehavior: Flickable.DragOverBounds
                 snapMode: ListView.SnapToItem
 
+                model: null
+
                 populate: Transition {
                     NumberAnimation {
                         property: "opacity"
@@ -85,7 +93,7 @@ Rectangle {
                 }
 
 
-                Component.onCompleted: model = starters
+
                 delegate: DishDelegate {
                     height: parent.height
                     width: 100
@@ -94,34 +102,5 @@ Rectangle {
         }
     }
 
-    states: [
-        State {
-            name: "STARTERS"
-            PropertyChanges {
-                target: bottomList;
-                model: starters
-            }
-        },
-        State {
-            name: "MAINS"
-            PropertyChanges {
-                target: bottomList;
-                model: mains
-            }
-        },
-        State {
-            name: "DESSERTS"
-            PropertyChanges {
-                target: bottomList;
-                model: desserts
-            }
-        },
-        State {
-            name: "DRINKS"
-            PropertyChanges {
-                target: bottomList;
-                model: drinks
-            }
-        }
-    ]
+    Component.onCompleted: bottomList.model = starters
 }
