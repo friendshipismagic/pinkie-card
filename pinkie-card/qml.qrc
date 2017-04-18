@@ -19,5 +19,6 @@
         <file>images/intro/noodles.svg</file>
         <file>GenericTileIcon.qml</file>
         <file>DishModal.ui.qml</file>
+        <file>GenericTileButton.qml</file>
     </qresource>
 </RCC>
