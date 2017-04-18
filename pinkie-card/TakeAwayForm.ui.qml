@@ -37,6 +37,7 @@ Item {
 
         DishModal {
             id: model_modal
+            // TODO: Tweak to fill the model in
         }
 
     }

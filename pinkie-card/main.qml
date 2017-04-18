@@ -10,17 +10,20 @@ ApplicationWindow {
     height: 480
     title: qsTr("The Pinkie Card")
 
+    property date cur_date: new Date()
     property string cur_lang: 'images/flags/United_States.svg'
 
-    Loader {
-        id: main_page_loader
+    StackView {
+        id: main_page_stackview
+        initialItem: intro
         anchors.fill: parent
-        source: "Intro.qml"
-    }
 
-    Connections {
-        target: main_page_loader.item
-        onMessage: main_page_loader.source = msg
+        IntroForm {
+            id: intro
+            cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
+            button_togo.onClicked: main_page_stackview.push(Qt.resolvedUrl('TakeAway.qml'))
+        }
+
     }
 
     Button {
