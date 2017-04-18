@@ -62,6 +62,8 @@ Rectangle {
                     height: 100
                 }
 
+                currentIndex: -1
+
                 onCurrentIndexChanged: {
                     bottomList.model = myModels[currentIndex];
                 }
@@ -80,6 +82,7 @@ Rectangle {
                 spacing: 5
                 boundsBehavior: Flickable.DragOverBounds
                 snapMode: ListView.SnapToItem
+
 
                 model: null
 
@@ -101,6 +104,4 @@ Rectangle {
             }
         }
     }
-
-    Component.onCompleted: bottomList.model = starters
 }
