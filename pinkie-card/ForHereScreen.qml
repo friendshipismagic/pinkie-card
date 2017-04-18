@@ -29,15 +29,11 @@ Rectangle {
         columnSpacing: 10
         columns: 2
 
-        Rectangle {
+        Image {
             id: imageRectangle
             Layout.fillHeight: true
             Layout.fillWidth: true
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: parent.color = "red"
-            }
+            source: "images/restaurant-table-set.jpg"
         }
 
 
@@ -65,7 +61,7 @@ Rectangle {
                 currentIndex: -1
 
                 highlight: Rectangle {
-                    color: "lightsteelblue"
+                    color: '#3498db'
                     radius: 8
                 }
 
