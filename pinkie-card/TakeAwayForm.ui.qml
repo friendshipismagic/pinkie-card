@@ -57,6 +57,11 @@ Item {
             anchors.fill: parent
             parent_height: parent.height
             parent_width: parent.width
+
+            dish_background: "images/dishes/dish_base.jpg"
+            dish_thumbnail: "images/dishes/dish_base.jpg"
+            dish_name: "My awesome dish"
+            dish_description_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus egestas nibh ut mi consequat bibendum. Morbi euismod metus vitae volutpat porta. Ut ullamcorper dolor in augue interdum, vitae porttitor tellus efficitur. Curabitur volutpat, ex sed scelerisque tincidunt, ex felis dapibus magna, in condimentum libero est et augue. Fusce sed neque est. Suspendisse mi leo, mattis sit amet tincidunt ac, efficitur quis magna. Pellentesque nec nunc a tellus mattis tincidunt. Duis ullamcorper quis nisl vitae lobortis."
             // TODO: Tweak to fill the model in
         }
 
@@ -105,6 +110,7 @@ Item {
                     tile_icon_svg: dish_thumbnail
                     tile_color: 'green'
                     tile_icon_fullscreen: true
+                    onClicked: model_popup.open()
                 }
                 model: StartersModel {}
             }
@@ -189,6 +195,7 @@ Item {
                     tile_icon_svg: dish_thumbnail
                     tile_color: 'red'
                     tile_icon_fullscreen: true
+                    onClicked: model_popup.open()
                 }
 
                 model: DessertsModel {}

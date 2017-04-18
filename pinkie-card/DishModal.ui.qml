@@ -8,7 +8,7 @@ Item {
     property string dish_background: "images/dishes/dish_base.jpg"
     property string dish_thumbnail: "images/dishes/dish_base.jpg"
     property string dish_name: "My awesome dish"
-    property string dish_description_text: "My awesome description"
+    property string dish_description_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus egestas nibh ut mi consequat bibendum. Morbi euismod metus vitae volutpat porta. Ut ullamcorper dolor in augue interdum, vitae porttitor tellus efficitur. Curabitur volutpat, ex sed scelerisque tincidunt, ex felis dapibus magna, in condimentum libero est et augue. Fusce sed neque est. Suspendisse mi leo, mattis sit amet tincidunt ac, efficitur quis magna. Pellentesque nec nunc a tellus mattis tincidunt. Duis ullamcorper quis nisl vitae lobortis."
     property int dish_margins: 20
     property int dish_title_margin: 20
     property int dish_title_max_size: 40
@@ -30,13 +30,15 @@ Item {
     Text {
         id: description
         text: qsTr(dish_description_text)
+        wrapMode: Text.WordWrap
         width: (parent_width / 2) - y
         anchors.top: title.bottom
         anchors.topMargin: dish_margins
         anchors.bottom: buttons.top
         anchors.left: parent.left
-        anchors.right: thumbnail.left
         anchors.leftMargin: dish_margins
+        horizontalAlignment: Text.AlignJustify
+        verticalAlignment: Text.AlignJustify
     }
 
     Image {
@@ -47,6 +49,7 @@ Item {
         anchors.right: parent.right
         anchors.topMargin: dish_margins
         anchors.rightMargin: dish_margins
+        anchors.leftMargin: dish_margins
         source: dish_thumbnail
     }
 
