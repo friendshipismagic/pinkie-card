@@ -5,9 +5,9 @@ import QtQuick.Controls 2.0
 ItemDelegate {
     id:control
     text: name
-    onPressed: {
-        console.log("hello");
-    }
+    onClicked: { background.color = "yellow" }
+    hoverEnabled: true
+
 
     contentItem: ColumnLayout {
         anchors.fill: parent
@@ -24,7 +24,7 @@ ItemDelegate {
                   text: control.text
                   fontSizeMode: Text.Fit
                   font: control.font
-                  color: control.enabled ? (control.down ? "#17a81a" : "#21be2b") : "#bdbebf"
+                  color: "#d9000000"
                   elide: Text.ElideRight
                   visible: control.text
                   horizontalAlignment: Text.AlignHCenter
@@ -37,13 +37,7 @@ ItemDelegate {
               implicitWidth: 100
               implicitHeight: 40
               opacity: enabled ? 1 : 0.3
-              color: control.down ? "#dddedf" : "#eeeeee"
+              color: control.hovered ? 'grey' : '#3498db'
 
-              Rectangle {
-                  width: parent.width
-                  height: 1
-                  color: control.down ? "#17a81a" : "#21be2b"
-                  anchors.bottom: parent.bottom
-              }
           }
 }
