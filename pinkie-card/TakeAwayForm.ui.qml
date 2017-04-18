@@ -24,6 +24,7 @@ Item {
         anchors.top: parent.top
         anchors.leftMargin: 0
         anchors.horizontalCenter: parent.horizontalCenter
+        z: 1
     }
 
     GenericTileIcon {
@@ -38,6 +39,7 @@ Item {
         tile_icon_spacing: 5
         tile_shadow_size: 10
         tile_text_spacing: 0
+        z: 1
     }
 
     Popup {
@@ -76,6 +78,7 @@ Item {
                 anchors.topMargin: 0
                 anchors.rightMargin: 0
                 anchors.leftMargin: 0
+                z: 1
             }
 
             GridView {
