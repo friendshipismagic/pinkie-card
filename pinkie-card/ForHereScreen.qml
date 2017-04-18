@@ -64,6 +64,11 @@ Rectangle {
 
                 currentIndex: -1
 
+                highlight: Rectangle {
+                    color: "lightsteelblue"
+                    radius: 8
+                }
+
                 onCurrentIndexChanged: {
                     bottomList.model = myModels[currentIndex];
                 }

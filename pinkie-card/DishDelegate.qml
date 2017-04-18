@@ -5,7 +5,6 @@ import QtQuick.Controls 2.0
 ItemDelegate {
     id:control
     text: name
-    onClicked: { background.color = "yellow" }
     hoverEnabled: true
 
 
@@ -38,6 +37,6 @@ ItemDelegate {
               implicitHeight: 40
               opacity: enabled ? 1 : 0.3
               color: control.hovered ? 'grey' : '#3498db'
-
+              radius: 8
           }
 }
