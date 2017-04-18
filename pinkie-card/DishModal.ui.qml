@@ -27,7 +27,7 @@ Item {
 
     Text {
         id: description
-        text: qsTr(dish_description)
+        text: qsTr(dish_description_text)
         width: (dish_modal.width / 2) - y
         anchors.top: title.bottom
         anchors.topMargin: dish_margins
