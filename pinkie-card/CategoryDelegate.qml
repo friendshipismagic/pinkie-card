@@ -5,13 +5,14 @@ import QtQuick.Controls 2.0
 ItemDelegate {
     id:control
     text: name
-    hoverEnabled: true
+    //Uncomment to switch hovering on.
+    //hoverEnabled: true
 
     background: Rectangle {
               implicitWidth: 100
               implicitHeight: 40
               opacity: enabled ? 1 : 0.3
-              color: control.hovered ? 'transparent' : '#3498db'
+              color: control.hovered ? 'grey' : 'transparent'
               radius: 8
           }
 
