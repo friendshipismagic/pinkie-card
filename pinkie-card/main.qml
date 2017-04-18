@@ -37,6 +37,17 @@ ApplicationWindow {
             id: for_here_component
 
             ForHereScreen {
+                onGoBack: main_page_stackview.pop()
+                onGoCo: main_page_stackview.push(checkout_component)
+            }
+        }
+
+        Component {
+            id: checkout_component
+
+            Checkout {
+                onGoBack: main_page_stackview.pop()
+                onGoEnd: main_page_stackview.pop() // TODO
             }
         }
 

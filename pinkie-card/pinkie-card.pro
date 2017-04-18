@@ -44,4 +44,8 @@ DISTFILES += \
     GenericTile.qml \
     DishModal.ui.qml \
     GenericTileButton.qml \
-    Intro.qml
+    Intro.qml \
+    CheckoutForm.ui.qml \
+    Checkout.qml \
+    models/CheckoutModel.qml \
+    CheckoutDelegate.qml
