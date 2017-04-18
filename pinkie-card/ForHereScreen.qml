@@ -56,7 +56,8 @@ Rectangle {
                 }
 
                 onCurrentIndexChanged: {
-                    forHereScreen.state = forHereScreen.states[currentIndex].name
+                    if (currentIndex > -1)
+                        forHereScreen.state = forHereScreen.states[currentIndex].name
                 }
             }
         }
@@ -73,7 +74,18 @@ Rectangle {
                 spacing: 5
                 boundsBehavior: Flickable.DragOverBounds
                 snapMode: ListView.SnapToItem
-                model: starters
+
+                populate: Transition {
+                    NumberAnimation {
+                        property: "opacity"
+                        from: 0
+                        to: 1
+                        duration: 1000
+                    }
+                }
+
+
+                Component.onCompleted: model = starters
                 delegate: DishDelegate {
                     height: parent.height
                     width: 100
@@ -91,25 +103,25 @@ Rectangle {
             }
         },
         State {
-                name: "MAINS"
-                PropertyChanges {
-                    target: bottomList;
-                    model: mains
-                }
-            },
-        State {
-                name: "DESSERTS"
-                PropertyChanges {
-                    target: bottomList;
-                    model: desserts
-                }
-            },
-        State {
-                name: "DRINKS"
-                PropertyChanges {
-                    target: bottomList;
-                    model: drinks
-                }
+            name: "MAINS"
+            PropertyChanges {
+                target: bottomList;
+                model: mains
             }
+        },
+        State {
+            name: "DESSERTS"
+            PropertyChanges {
+                target: bottomList;
+                model: desserts
+            }
+        },
+        State {
+            name: "DRINKS"
+            PropertyChanges {
+                target: bottomList;
+                model: drinks
+            }
+        }
     ]
 }
