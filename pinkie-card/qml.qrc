@@ -13,6 +13,7 @@
         <file>models/DessertModel.qml</file>
         <file>models/DrinkModel.qml</file>
         <file>models/LanguageModel.qml</file>
+        <file>models/CheckoutModel.qml</file>
         <file>images/restaurant-table-set.jpg</file>
         <file>images/dishes/dish_base.jpg</file>
         <file>images/dishes/salade.jpg</file>
@@ -34,5 +35,8 @@
         <file>DishModal.ui.qml</file>
         <file>GenericTileButton.qml</file>
         <file>Intro.qml</file>
+        <file>CheckoutForm.ui.qml</file>
+        <file>Checkout.qml</file>
+        <file>CheckoutDelegate.qml</file>
     </qresource>
 </RCC>
