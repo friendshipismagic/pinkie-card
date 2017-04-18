@@ -11,13 +11,12 @@ Item {
     property int tile_spacing: 15
     property int tile_text_max_size: 72
     property int text_padding: 10
+    property alias button_here: here
+    property alias button_togo: to_go
 
     ColumnLayout {
         z: 1
-        anchors.rightMargin: tile_spacing
-        anchors.leftMargin: tile_spacing
-        anchors.bottomMargin: tile_spacing
-        anchors.topMargin: tile_spacing
+        anchors.margins: tile_spacing
         spacing: tile_spacing
 
         anchors.fill: parent

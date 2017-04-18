@@ -10,16 +10,36 @@ ApplicationWindow {
     height: 480
     title: qsTr("The Pinkie Card")
 
-    ForHereScreen {
-        visible: true
-        z: 2
-    }
-
     property date cur_date: new Date()
     property string cur_lang: 'images/flags/United_States.svg'
 
-    Intro {
-        cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
+    StackView {
+        id: main_page_stackview
+        initialItem: intro
+        anchors.fill: parent
+
+        IntroForm {
+            id: intro
+            cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
+            button_togo.onClicked: main_page_stackview.push(take_away_component)
+            button_here.onClicked: main_page_stackview.push(for_here_component)
+        }
+
+        Component {
+            id: take_away_component
+
+            TakeAway {
+                onGoBack: main_page_stackview.pop()
+            }
+        }
+
+        Component {
+            id: for_here_component
+
+            ForHereScreen {
+            }
+        }
+
     }
 
     Button {
