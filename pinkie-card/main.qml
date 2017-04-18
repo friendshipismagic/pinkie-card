@@ -47,7 +47,15 @@ ApplicationWindow {
 
             Checkout {
                 onGoBack: main_page_stackview.pop()
-                onGoEnd: main_page_stackview.pop() // TODO
+                onGoEnd: main_page_stackview.push(final_component)
+            }
+        }
+
+        Component {
+            id: final_component
+
+            Final {
+                onGoBack: main_page_stackview.pop()
             }
         }
 

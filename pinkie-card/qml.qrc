@@ -38,5 +38,7 @@
         <file>CheckoutForm.ui.qml</file>
         <file>Checkout.qml</file>
         <file>CheckoutDelegate.qml</file>
+        <file>Final.qml</file>
+        <file>FinalForm.ui.qml</file>
     </qresource>
 </RCC>

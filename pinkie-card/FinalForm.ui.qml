@@ -20,7 +20,7 @@ Item {
         tile_text_spacing_vertical: 10
     }
 
-    GenericTileIcon {
+    GenericTile {
         id: time_remaining_tile
         anchors.topMargin: 50
         anchors.horizontalCenter: parent.horizontalCenter
@@ -37,6 +37,7 @@ Item {
         anchors.top: time_remaining_tile.bottom
         width: root_form.width * 0.8
         height: root_form.height / 8
+        tile_text_center: false
         tile_text: qsTr("Oops, je souhaite corriger ma commande")
     }
 
