@@ -41,4 +41,5 @@ DISTFILES += \
     FlagModal.ui.qml \
     Intro.ui.qml \
     GenericTileIcon.qml \
-    GenericTile.qml
+    GenericTile.qml \
+    DishModal.ui.qml
