@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtQuick.Controls 2.1
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
 import QtQml 2.2
 
@@ -22,6 +22,7 @@ ApplicationWindow {
             id: intro
             cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
             button_togo.onClicked: main_page_stackview.push(take_away_component)
+            button_here.onClicked: main_page_stackview.push(for_here_component)
         }
 
         Component {
@@ -29,6 +30,13 @@ ApplicationWindow {
 
             TakeAway {
                 onGoBack: main_page_stackview.pop()
+            }
+        }
+
+        Component {
+            id: for_here_component
+
+            ForHereScreen {
             }
         }
 
