@@ -14,6 +14,8 @@ Item {
     property int dish_title_max_size: 40
     property int dish_buttons_height: 100
     property int dish_buttons_text_max_size: 20
+    property int parent_width: 640
+    property int parent_height: 480
 
     Text {
         id: title
@@ -28,7 +30,7 @@ Item {
     Text {
         id: description
         text: qsTr(dish_description_text)
-        width: (dish_modal.width / 2) - y
+        width: (parent_width / 2) - y
         anchors.top: title.bottom
         anchors.topMargin: dish_margins
         anchors.bottom: buttons.top

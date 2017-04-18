@@ -54,6 +54,9 @@ Item {
 
         DishModal {
             id: model_modal
+            anchors.fill: parent
+            parent_height: parent.height
+            parent_width: parent.width
             // TODO: Tweak to fill the model in
         }
 
@@ -143,6 +146,7 @@ Item {
                     tile_icon_svg: dish_thumbnail
                     tile_color: 'blue'
                     tile_icon_fullscreen: true
+                    onClicked: model_popup.open()
                 }
 
                 model: DishesModel {}
