@@ -18,6 +18,11 @@ ApplicationWindow {
         source: "Intro.qml"
     }
 
+    Connections {
+        target: main_page_loader.item
+        onMessage: main_page_loader.source = msg
+    }
+
     Button {
         id: lang_select
         x: 477
