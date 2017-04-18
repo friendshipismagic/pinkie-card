@@ -48,4 +48,6 @@ DISTFILES += \
     CheckoutForm.ui.qml \
     Checkout.qml \
     models/CheckoutModel.qml \
-    CheckoutDelegate.qml
+    CheckoutDelegate.qml \
+    FinalForm.ui.qml \
+    Final.qml
