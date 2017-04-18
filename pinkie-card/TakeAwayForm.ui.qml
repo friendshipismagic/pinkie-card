@@ -12,6 +12,7 @@ Item {
     property int tile_spacing: 15
     property int tile_text_max_size: 72
     property int text_padding: 10
+    property int popup_spacing: 100
 
     GenericTile {
         id: main_title
@@ -22,6 +23,22 @@ Item {
         anchors.top: parent.top
         anchors.leftMargin: 0
         anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    Popup {
+        id: model_popup
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+        x: popup_spacing
+        y: popup_spacing
+        width: take_away_form.width - 2 * popup_spacing
+        height: take_away_form.height - 2 * popup_spacing
+
+        DishModal {
+            id: model_modal
+        }
+
     }
 
     SwipeView {
