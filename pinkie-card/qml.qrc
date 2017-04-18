@@ -13,12 +13,13 @@
         <file>images/flags/Japan.svg</file>
         <file>models/LanguageModel.qml</file>
         <file>FlagModal.ui.qml</file>
-        <file>Intro.ui.qml</file>
+        <file>IntroForm.ui.qml</file>
         <file>GenericTile.qml</file>
         <file>images/intro/takeaway.svg</file>
         <file>images/intro/noodles.svg</file>
         <file>GenericTileIcon.qml</file>
         <file>DishModal.ui.qml</file>
         <file>GenericTileButton.qml</file>
+        <file>Intro.qml</file>
     </qresource>
 </RCC>

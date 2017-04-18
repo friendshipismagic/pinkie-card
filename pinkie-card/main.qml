@@ -10,11 +10,12 @@ ApplicationWindow {
     height: 480
     title: qsTr("The Pinkie Card")
 
-    property date cur_date: new Date()
     property string cur_lang: 'images/flags/United_States.svg'
 
-    Intro {
-        cur_clock: cur_date.toLocaleDateString() + ", " + cur_date.toLocaleTimeString(Locale.ShortFormat)
+    Loader {
+        id: main_page_loader
+        anchors.fill: parent
+        source: "Intro.qml"
     }
 
     Button {

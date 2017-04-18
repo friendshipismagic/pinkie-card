@@ -43,4 +43,5 @@ DISTFILES += \
     GenericTileIcon.qml \
     GenericTile.qml \
     DishModal.ui.qml \
-    GenericTileButton.qml
+    GenericTileButton.qml \
+    Intro.qml
