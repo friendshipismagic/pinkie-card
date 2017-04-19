@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.0
-import 'models/'
+import "models/"
 
 Item {
     id: root_form
@@ -16,6 +16,7 @@ Item {
         anchors.right: parent.right
         anchors.top: parent.top
         height: parent.height / 8
+        tile_color: "#ee4f90"
         tile_text: qsTr("Checkout")
     }
 
@@ -26,7 +27,8 @@ Item {
         anchors.right: parent.right
         anchors.bottom: buttons.top
 
-        model: CheckoutModel {}
+        model: CheckoutModel {
+        }
         delegate: CheckoutDelegate {
             anchors.left: parent.left
             anchors.right: parent.right
@@ -63,9 +65,9 @@ Item {
             Layout.fillWidth: true
             tile_text: "Proceed"
             tile_text_max_size: dish_buttons_text_max_size
-            tile_color: '#2ecc71'
-            tile_color_hovered: '#27ae60'
-            tile_color_pressed: '#16a085'
+            tile_color: "#f8b9ce"
+            tile_color_hovered: "#f7d2df"
+            tile_color_pressed: "#f7a1be"
         }
     }
 

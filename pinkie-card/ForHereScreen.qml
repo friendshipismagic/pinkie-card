@@ -6,7 +6,7 @@ import "models"
 Rectangle {
     id: forHereScreen
     anchors.fill: parent
-    color: '#34495e'
+    color: '#222222'
 
     signal goBack()
     signal goCo()
@@ -65,7 +65,7 @@ Rectangle {
                 currentIndex: -1
 
                 highlight: Rectangle {
-                    color: '#3498db'
+                    color: '#f8b9ce'
                     radius: 8
                 }
 
