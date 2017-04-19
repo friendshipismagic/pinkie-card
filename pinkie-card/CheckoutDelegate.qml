@@ -29,7 +29,7 @@ ItemDelegate {
     }
     background: Rectangle {
         id: elt_background
-        color: 'grey'
+        color: '#d977b1'
         anchors.fill: list_layout
     }
 
