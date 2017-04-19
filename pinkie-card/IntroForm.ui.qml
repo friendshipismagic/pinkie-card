@@ -28,7 +28,7 @@ Item {
             tile_text: qsTr("The Pinkie Restaurant")
             tile_text_spacing_horizontal: 0.1*intro_form.width
             tile_text_spacing_vertical: 0
-            tile_color: '#2ecc71'
+            tile_color: "#ee4f90"
         }
 
         RowLayout {
@@ -41,9 +41,9 @@ Item {
                 Layout.fillHeight: true
                 tile_text: qsTr("On place")
                 tile_text_max_size: tile_text_max_size
-                tile_icon_svg: 'images/intro/noodles.svg'
+                tile_icon_svg: "images/intro/on-place.png"
                 tile_icon_spacing: 0.2*width
-                tile_color: '#3498db'
+                tile_color: "#f8b9ce"
             }
 
             GenericTileIcon {
@@ -52,9 +52,9 @@ Item {
                 Layout.fillHeight: true
                 tile_text: qsTr("TakeAway")
                 tile_text_max_size: tile_text_max_size
-                tile_icon_svg: 'images/intro/takeaway.svg'
+                tile_icon_svg: "images/intro/takeaway.png"
                 tile_icon_spacing: 0.2*width
-                tile_color: '#2980b9'
+                tile_color: "#f8b9ce"
             }
         }
 
@@ -65,13 +65,13 @@ Item {
             tile_text: intro_form.cur_clock
             tile_text_spacing_horizontal: 0.1*intro_form.width
             tile_text_spacing_vertical: 0
-            tile_color: '#2ecc71'
+            tile_color: "#ee4f90"
         }
     }
 
     Rectangle {
         id: intro_background
         anchors.fill: parent
-        color: '#34495e'
+        color: "#222222"
     }
 }

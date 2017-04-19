@@ -41,5 +41,7 @@
         <file>CheckoutDelegate.qml</file>
         <file>Final.qml</file>
         <file>FinalForm.ui.qml</file>
+        <file>images/intro/on-place.png</file>
+        <file>images/intro/takeaway.png</file>
     </qresource>
 </RCC>
