@@ -43,5 +43,6 @@
         <file>FinalForm.ui.qml</file>
         <file>images/intro/on-place.png</file>
         <file>images/intro/takeaway.png</file>
+        <file>images/pinkie-oops.png</file>
     </qresource>
 </RCC>
