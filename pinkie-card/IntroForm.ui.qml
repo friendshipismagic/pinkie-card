@@ -39,7 +39,7 @@ Item {
                 id: here
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                tile_text: qsTr("For here")
+                tile_text: qsTr("On place")
                 tile_text_max_size: tile_text_max_size
                 tile_icon_svg: 'images/intro/noodles.svg'
                 tile_icon_spacing: 0.2*width
@@ -50,7 +50,7 @@ Item {
                 id: to_go
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                tile_text: qsTr("To Go")
+                tile_text: qsTr("TakeAway")
                 tile_text_max_size: tile_text_max_size
                 tile_icon_svg: 'images/intro/takeaway.svg'
                 tile_icon_spacing: 0.2*width

@@ -19,7 +19,7 @@ Item {
     GenericTile {
         id: main_title
         height: 100
-        tile_text: qsTr("Take Away")
+        tile_text: qsTr("TakeAway")
         tile_shadow_size: 0
         anchors.left: parent.left
         anchors.top: parent.top
