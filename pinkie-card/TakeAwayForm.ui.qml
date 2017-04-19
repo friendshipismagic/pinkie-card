@@ -21,6 +21,7 @@ Item {
         height: 100
         tile_text: qsTr("TakeAway")
         tile_shadow_size: 0
+        tile_color: "#ee4f90"
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.leftMargin: 0
@@ -35,11 +36,13 @@ Item {
         anchors.left: parent.left
         anchors.top: parent.top
         tile_text: ''
-        tile_color: '#34495e'
         tile_icon_svg: 'images/left_arrow.svg'
         tile_icon_spacing: 5
         tile_shadow_size: 10
         tile_text_spacing: 0
+        tile_color: "#f8b9ce"
+        tile_color_hovered: "#f7d2df"
+        tile_color_pressed: "#f7a1be"
         z: 1
     }
 
@@ -50,11 +53,13 @@ Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         tile_text: ''
-        tile_color: '#34495e'
         tile_icon_svg: 'images/right_arrow.svg'
         tile_icon_spacing: 5
         tile_shadow_size: 10
         tile_text_spacing: 0
+        tile_color: "#f8b9ce"
+        tile_color_hovered: "#f7d2df"
+        tile_color_pressed: "#f7a1be"
         z: 1
     }
 
@@ -95,6 +100,7 @@ Item {
                 id: starters_text
                 height: 50
                 tile_text: qsTr("Starters")
+                tile_color: "#ee4f90"
                 Layout.fillWidth: true
                 anchors.top: parent.top
                 anchors.right: parent.right
@@ -139,6 +145,7 @@ Item {
                 id: dishes_text
                 height: 50
                 tile_text: qsTr("Dishes")
+                tile_color: "#ee4f90"
                 Layout.fillWidth: true
                 anchors.top: parent.top
                 anchors.right: parent.right
@@ -182,6 +189,7 @@ Item {
                 id: desserts_text
                 height: 50
                 tile_text: qsTr("Desserts")
+                tile_color: "#ee4f90"
                 Layout.fillWidth: true
                 anchors.top: parent.top
                 anchors.right: parent.right
@@ -231,7 +239,7 @@ Item {
     Rectangle {
         id: background
         anchors.fill: parent
-        color: 'blue'
+        color: '#222222'
         z: -1
     }
 }
