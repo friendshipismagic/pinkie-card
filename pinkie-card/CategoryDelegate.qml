@@ -9,12 +9,12 @@ ItemDelegate {
     //hoverEnabled: true
 
     background: Rectangle {
-              implicitWidth: 100
-              implicitHeight: 40
-              opacity: enabled ? 1 : 0.3
-              color: control.hovered ? 'grey' : 'transparent'
-              radius: 8
-          }
+        implicitWidth: 100
+        implicitHeight: 40
+        opacity: control.hovered ? 0.3 : 0
+        color: '#fff'
+        radius: 8
+    }
 
     onClicked: ListView.view.currentIndex = index
 }
