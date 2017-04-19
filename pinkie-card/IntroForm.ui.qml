@@ -37,6 +37,8 @@ Item {
 
             GenericTileIcon {
                 id: here
+                tile_color_pressed: "#f7a1be"
+                tile_color_hovered: "#f7d2df"
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 tile_text: qsTr("On place")
@@ -48,6 +50,8 @@ Item {
 
             GenericTileIcon {
                 id: to_go
+                tile_color_pressed: "#f7a1be"
+                tile_color_hovered: "#f7d2df"
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 tile_text: qsTr("TakeAway")
