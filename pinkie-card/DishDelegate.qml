@@ -7,36 +7,60 @@ ItemDelegate {
     text: name
     hoverEnabled: true
 
-
-    contentItem: ColumnLayout {
+    contentItem: MouseArea {
+        id: mouse_area
+        drag.target: contents
         anchors.fill: parent
-        Image {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            source: imageSource
-            fillMode: Image.Stretch
-            Layout.margins: 5
-        }
 
-        Text {
-            rightPadding: control.spacing
-            text: control.text
-            fontSizeMode: Text.Fit
-            font: control.font
-            color: "#d9000000"
-            elide: Text.ElideRight
-            visible: control.text
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            Layout.fillWidth: true
-        }
-    }
+        Rectangle {
+            id: contents
 
-    background: Rectangle {
-        implicitWidth: 100
-        implicitHeight: 40
-        opacity: enabled ? 1 : 0.3
-        color: control.hovered ? '#f7d2df' : '#f8b9ce'
-        radius: 8
+            color: control.hovered ? '#f7d2df' : '#f8b9ce'
+            radius: 8
+
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width
+            height: parent.height
+
+            Drag.active: mouse_area.drag.active
+            Drag.hotSpot.x: 0
+            Drag.hotSpot.y: 0
+
+            states: State {
+                when: mouse_area.drag.active
+                ParentChange { target: contents; parent: control }
+                AnchorChanges {
+                    target: contents
+                    anchors.verticalCenter: undefined
+                    anchors.horizontalCenter: undefined
+                }
+            }
+
+            ColumnLayout {
+                anchors.fill: parent
+
+                Image {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    source: imageSource
+                    fillMode: Image.Stretch
+                    Layout.margins: 5
+                }
+
+                Text {
+                    rightPadding: control.spacing
+                    text: control.text
+                    fontSizeMode: Text.Fit
+                    font: control.font
+                    color: "#d9000000"
+                    elide: Text.ElideRight
+                    visible: control.text
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    Layout.fillWidth: true
+                }
+            }
+        }
     }
 }
