@@ -99,4 +99,11 @@ ApplicationWindow {
             }
         }
     }
+
+    Rectangle {
+        id: background
+        anchors.fill: parent
+        color: "#222222"
+        z: -2
+    }
 }

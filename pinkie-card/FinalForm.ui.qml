@@ -60,7 +60,7 @@ Item {
    Rectangle {
        id: background
        anchors.fill: parent
-       color: 'red'
+       color: "#222222"
        z: -1
    }
 }
