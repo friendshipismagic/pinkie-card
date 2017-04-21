@@ -21,4 +21,3 @@ pipeline:
     message: |
       {{ build.author  }}: {{ build.commit  }}
       Build {{ build.number  }} {{ build.status  }}.
-
