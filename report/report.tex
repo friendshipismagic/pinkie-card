@@ -105,42 +105,43 @@ transition to the next screen.
 
 \subsubsection{The "on place" screen}
 
-Cette partie de l'interface repose sur deux <<~decks~>> : l'un en bas de l'écran et l'autre à droite. Celui de droite
-permet de sélectionner le sous-menu correspondant à un type d'article, par exemple plats, desserts, boissons. Celui
-du bas permet de sélectionner un article au sein d'une catégorie, par exemple coq au vin, croque-monsieur. Le bouton
-drapeau reste présent sur cet écran comme sur tous les autres de l'interface.
+This part of the user interface relies on two card "decks": one at the bottom of the screen and the other on the
+right. The right-hand one allows to choose the desired menu category, mapped to an article type. These may include
+starters, main courses, drinks, ... whose contents will be "sent" to the bottom deck. The bottom deck is used to
+choose an article in a category, like a \emph{coq au vin}\footnote{En français dans le texte}. The flag button stays
+on-screen here, as well as on every other screen.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{in_place_screen1.jpg}
 \end{center}
 
-Quand on clique sur un article, un écran modal s'ouvre et affiche des détails sur l'article et permet de préciser
-quelques éléments (par exemple la cuisson pour une viande) avant de l'ajouter à la commande.
+A click -- or tap -- on an article, a modal screen pops in and displays details about the article, and allows to
+give more insighst on an element (gluten free, vegan, ...) before adding it to the order.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{in_place_screen2.jpg}
 \end{center}
 
-La sélection se fait avec un concept de <<~deck de cartes~>> : chaque carte représente un élément, que l'on ajoute
-en faisant glisser la carte. Pour sélectionner un plat dans le deck du bas, on <<~prend~>> la carte avec le doigt que
-l'on <<~dépose~>> ensuite au centre de l'écran.
+Selecting an item is done through a "card deck" concept: each card represents an element, that one adds by dragging
+it. Adding a dish -- or any other article -- to the order is a matter of dragging a card to the center of the screen,
+dropping it on the table picture.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{in_place_drag.jpg}
 \end{center}
 
-Le mécanisme est le même pour changer de catégorie du menu. L'on attrape une carte dans le deck de droite (par
-exemple <<~entrées~>>) que l'on viens ensuite déposer sur le deck du bas, ce qui aura pour effet d'y distribuer
-les cartes des nouveaux éléments.
+This mechanics remains the same one to change the menu category. One drags a card from the right-hand deck (let's
+say "starters"), then drags it to the bottom of the screen, then drops it on the bottom deck. This will spread the
+stack of cards representing the items of this category.
 
-La partie du centre de l'écran est l'image d'une table permettant de visualiser sa commande : au fur et à mesure que
-l'on viens compléter sa commande, la table se garnit des éléments que l'on commande.
+The middle of the screen is filled by table picture, allowing the customer to view his order "visually": as he adds
+items to his order, the table fills up with elements he orders.
 
-Le système de drag-and-drop permet d'ajouter un mécanisme de choix intuitif. Prenons l'exemple d'un steak : il est
-important que le client puisse choisir la cuisson -- bien que <<~à point~>> devrait être bannie. Lorsqu'une carte
-propose plusieurs choix comme ceci, des zones de surbrillance apparaissent au dessus de la table, correspondant
-chacune à une option. Dans le cas de notre steak, trois zones seraient présentes : <<~saignant~>>, <<~moyen~>> et
-<<~à point~>>. L'option retenue sera celle dans laquelle le client lâchera la carte.
+The drag-and-drop system allows an intuitive and streamlined choice mechanic. Let's take the example of a steak:
+it is crucial that the client is able to choose the cooking -- although "well done" should be banned. When a card
+has different options -- here "Rare", "Medium rare", "Well done" --, transparent overlays appear over the table.
+There are as many as there is options for this item, each mapping to an option. In our example, three boxes would be
+available : "Rare", "Medium rare", "Well done". The registered option will be the one the client drops the card on.
 
 \begin{center}
 	\includegraphics[width=\textwidth]{in_place_drag_options.jpg}
