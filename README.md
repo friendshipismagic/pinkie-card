@@ -40,3 +40,10 @@ To have a nice text report, easily versionable, and open source, we decided
 to use LaTeX, which source can be found in `report/report.tex`. Compilation
 is easily done : `pdflatex report.tex`.
 
+## Participants
+
+- Alexis Bauvin
+- Clément Decoodt
+- Ronan Desplanques
+- Ming Yang
+
