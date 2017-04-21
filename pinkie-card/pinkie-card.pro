@@ -27,3 +27,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    TakeAwayForm.ui.qml \
+    TakeAway.qml \
+    TakeAwayTileForm.ui.qml \
+    TakeAwayTile.qml \
+    models/StartersModel.qml \
+    models/DishesModel.qml \
+    models/DessertsModel.qml \
+    images/dishes/dish_base.jpg \
+    models/LanguageModel.qml \
+    FlagModal.ui.qml \
+    Intro.ui.qml \
+    GenericTileIcon.qml \
+    GenericTile.qml \
+    DishModal.ui.qml \
+    GenericTileButton.qml \
+    Intro.qml \
+    CheckoutForm.ui.qml \
+    Checkout.qml \
+    models/CheckoutModel.qml \
+    CheckoutDelegate.qml \
+    FinalForm.ui.qml \
+    Final.qml

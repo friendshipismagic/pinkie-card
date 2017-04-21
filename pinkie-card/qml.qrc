@@ -1,8 +1,48 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Page1.qml</file>
-        <file>Page1Form.ui.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>TakeAwayForm.ui.qml</file>
+        <file>TakeAway.qml</file>
+        <file>models/StartersModel.qml</file>
+        <file>models/DishesModel.qml</file>
+        <file>models/DessertsModel.qml</file>
+        <file>models/StarterModel.qml</file>
+        <file>models/MenuModel.qml</file>
+        <file>models/MainCourseModel.qml</file>
+        <file>models/DessertModel.qml</file>
+        <file>models/DrinkModel.qml</file>
+        <file>models/LanguageModel.qml</file>
+        <file>models/CheckoutModel.qml</file>
+        <file>images/restaurant-table-set.jpg</file>
+        <file>images/dishes/dish_base.jpg</file>
+        <file>images/dishes/salade.jpg</file>
+        <file>images/dishes/carottes.jpg</file>
+        <file>images/dishes/celeri_remoulade.jpg</file>
+        <file>images/flags/United_States.svg</file>
+        <file>images/flags/France.svg</file>
+        <file>images/flags/Japan.svg</file>
+        <file>images/intro/takeaway.svg</file>
+        <file>images/intro/noodles.svg</file>
+        <file>images/left_arrow.svg</file>
+        <file>images/right_arrow.svg</file>
+        <file>DishDelegate.qml</file>
+        <file>FlagModal.ui.qml</file>
+        <file>IntroForm.ui.qml</file>
+        <file>GenericTile.qml</file>
+        <file>GenericTileIcon.qml</file>
+        <file>ForHereScreen.qml</file>
+        <file>CategoryDelegate.qml</file>
+        <file>DishModal.ui.qml</file>
+        <file>GenericTileButton.qml</file>
+        <file>Intro.qml</file>
+        <file>CheckoutForm.ui.qml</file>
+        <file>Checkout.qml</file>
+        <file>CheckoutDelegate.qml</file>
+        <file>Final.qml</file>
+        <file>FinalForm.ui.qml</file>
+        <file>images/intro/on-place.png</file>
+        <file>images/intro/takeaway.png</file>
+        <file>images/pinkie-oops.png</file>
     </qresource>
 </RCC>

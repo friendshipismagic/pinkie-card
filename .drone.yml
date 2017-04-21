@@ -6,12 +6,18 @@ pipeline:
       - qmake-qt5
       - make -j8
 
+  report:
+    image: blang/latex
+    commands:
+      - cd report && pdflatex report.tex && pdflatex report.tex
+
   telegram:
     image: appleboy/drone-telegram
-    token: ${TGBOT_TOKEN}
+    secrets: [ TELEGRAM_TOKEN ]
     to:
       - "-172113772"
+    document:
+      - report/report.pdf
     message: |
-      {{ build.author }}: {{ build.commit }}
-      Build {{ build.number }} {{ build.status }}.
-
+      {{ build.author  }}: {{ build.commit  }}
+      Build {{ build.number  }} {{ build.status  }}.
